@@ -16,3 +16,6 @@ Cheat Sheet about a wide variety of themes in CS &amp; AI
 - [DL training steps](https://github.com/jumdc/cheat-sheets/blob/main/ai/dl-learning%20steps.md)
 - [Pytorch](https://github.com/jumdc/cheat-sheets/blob/main/ai/pytorch.md)
 - [wandb](https://github.com/jumdc/cheat-sheets/blob/main/ai/wandb.md)
+
+### Hardware
+- [GPUs, Nvidia & cuda](https://github.com/jumdc/cheat-sheets/blob/main/hardware/gpu.md)
