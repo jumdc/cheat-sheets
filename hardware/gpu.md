@@ -1,5 +1,7 @@
 # GPU hardware 
 
+## Table of contents 
+
 ## Install the Nvidia driver
 
 Using graphics-drivers PPA repository allows us to install bleeding edge Nvidia 
@@ -33,3 +35,11 @@ sudo apt-get update
 sudo apt-get -y install cuda
 ```
 Complementary : [Quick start guide](https://docs.nvidia.com/cuda/cuda-quick-start-guide/index.html#ubuntu-x86_64-deb)
+```
+sudo reboot
+export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64\
+                         ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
+- Check the installation 
+```nvcc --version```
