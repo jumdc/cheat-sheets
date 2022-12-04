@@ -10,6 +10,7 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 - [Random tips & tricks in sh & python](https://github.com/jumdc/cheat-sheets/blob/main/cs/tips%20%26%20tricks%20-%20python%20%26%20server.md)
 - [Tmux](https://github.com/jumdc/cheat-sheets/blob/main/cs/tmux.md)
 - [Hydra](https://github.com/jumdc/cheat-sheets/blob/main/cs/hydra.md)
+- [Shapes in numpy](https://github.com/jumdc/cheat-sheets/blob/main/cs/numpy.md)
 
 ### AI 
 - [Basic ML](https://github.com/jumdc/cheat-sheets/blob/main/ai/basic-ml.md)
