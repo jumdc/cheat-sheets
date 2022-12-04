@@ -1,5 +1,5 @@
 ﻿# git cheatsheet 
-![github](https://github.githubassets.com/images/modules/open_graph/github-octocat.png)
+ <img width="300" alt="octocat" src="https://user-images.githubusercontent.com/62952163/205496926-f04a3e92-c632-4619-901d-6a689ff43fe2.png">
 
 ## Summary 
 1. [git fecth & pull](#fetch)
