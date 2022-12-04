@@ -3,7 +3,10 @@
 <img width="200" alt="numpy logo" src="https://user-images.githubusercontent.com/62952163/205486279-904df348-9fc8-4d39-97e2-b7152e235e75.png">
 
 ## Table of contents
-1. [Reshape](#reshape)
+1. [Shape](#shape)
+2. [Reshape](#reshape)
+
+## Shapes <a name='shape'></a>
 
 
 ## Reshape <a name='reshape'></a>
