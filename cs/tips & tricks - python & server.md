@@ -5,6 +5,8 @@
 ## Summary 
 1. [Basic linux cmd](#cmd)
 2. [Running processes](#background)
+3. [Logging](#log)
+4. [Change interpreter in VScode](#interpreter)
 
  
 ## Basic Linux Command <a name='cmd'> </a>
@@ -30,7 +32,7 @@ Executes 1.py in background & wirte the stout to the file 1.ouput.
 nohup sh scheduler/preprocessing.sh > logs/output_prepro_ch_visuel.output &
 ```
 
-## logging
+## logging <a name='log'> </a>
 The `logging` module in Python provides a default logger that allows to get started without much configuration. 
 
 :exclamation: by default `debug()`and `default()`do not get logged. 
@@ -56,5 +58,5 @@ output :
 2018-07-11 20:12:06,288 - Admin logged in
 ```
 
-## change interpreter in vscode
+## change interpreter in vscode <a name='interpreter'> </a>
 `ctrl + shift + P` and select __python interpreter__.	
