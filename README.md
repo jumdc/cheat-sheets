@@ -1,5 +1,5 @@
 # cheat-sheets
-Cheat Sheet about a wide variety of themes in CS &amp; AI 
+Cheat Sheets about a wide variety of themes in CS &amp; AI 
 
 
 ## Table of contents
