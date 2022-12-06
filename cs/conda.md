@@ -8,8 +8,12 @@
 2. [Installation of Miniconda for Linux](#installation)
 3. [Using Conda](#usage)
    - [Creating a new environment from scratch ?](#newenv)
-   - [Creating an environment from a yml](#yml)
    - [Using the environment in a .ipynb](#nb)
+   - [Export the environment specs](#export)
+   - [Deactivate](#deactivate)
+   - [Creating an environment from a yml](#yml)
+   - [Delete an environment](#delete)
+
 4. [Updating Conda](#update)
 5. [Uninstalling Conda](#uninstall)
 6. [References](#references)
@@ -117,12 +121,12 @@ pip <pip_subcommand>
 Always try to install the packages with conda first.
 Pip should be run with : `--upgrade-strategy only-if-needed` (the default).
 
-### Export environment 
+   ### Export environment  <a name="export"></a>
 ```{bash}
 conda env export > environment.yml
 ```
 
-### Deactivate the environment
+   ### Deactivate the environment <a name="deactivate"></a>
 ```{bash}
 conda deactivate
 ```
@@ -130,6 +134,12 @@ conda deactivate
 ```{bash}
 conda env create -f environment.yml
 ```
+   ### Delete an environment <a name="delete"></a>
+  
+```bash
+   conda env remove -n corrupted_env
+```
+   
 
 ## 4. Updating Conda <a name="update"></a>
 ```{bash}
