@@ -9,6 +9,7 @@
 3. [Using Conda](#usage)
    - [Creating a new environment from scratch ?](#newenv)
    - [Creating an environment from a yml](#yml)
+   - [Using the environment in a .ipynb](#nb)
 4. [Updating Conda](#update)
 5. [Uninstalling Conda](#uninstall)
 6. [References](#references)
@@ -96,13 +97,15 @@ conda install scipy
 ```{bash}
 conda list
 ```
-### Adding conda environment to jupyter lab
+### Using the environment from a notebook <a name="nb"></a>
+  
  ```{bash}
 conda activate env_name
 conda install ipykernel
 python -m ipykernel install --user --name=env_name
  ```
- restart jupyter lab
+   
+ When using jupyter lab :  restart jupyter lab.
  
 #### Using pip in the environment
 ```{bash}
