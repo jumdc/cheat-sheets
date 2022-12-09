@@ -1,4 +1,5 @@
-![conda](https://user-images.githubusercontent.com/62952163/198683845-f5706e8b-182e-407d-88fd-85eb97f6ad45.png)
+![conda](https://user-images.githubusercontent.com/62952163/198683845-f5706e8b-182e-407d-88fd-85eb97f6ad45.png)  
+
 
 # Table of Contents
 1. [What is Conda ? ](#what)
