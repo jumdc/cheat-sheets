@@ -20,3 +20,6 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 
 ### Hardware
 - [GPUs, Nvidia & cuda](https://github.com/jumdc/cheat-sheets/blob/main/hardware/gpu.md)
+
+### Others
+- [LaTeX](https://github.com/jumdc/cheat-sheets/blob/main/others/latex.md)
