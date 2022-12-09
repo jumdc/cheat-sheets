@@ -1,6 +1,5 @@
-# Shapes in numpy
+<img width="200" alt="numpy logo" src="https://user-images.githubusercontent.com/62952163/205486279-904df348-9fc8-4d39-97e2-b7152e235e75.png">  
 
-<img width="200" alt="numpy logo" src="https://user-images.githubusercontent.com/62952163/205486279-904df348-9fc8-4d39-97e2-b7152e235e75.png">
 
 ## Table of contents
 1. [Shape](#shape)
