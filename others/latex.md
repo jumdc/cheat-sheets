@@ -1,11 +1,17 @@
 ![LaTeX_logo](https://user-images.githubusercontent.com/62952163/206713523-88b58654-567d-4212-b450-c97dc4d00a0c.png)
 
 ## Table of content
-1. [Figures](#fig)
+1. [Compilers](#compilers)
+2. [Figures](#fig)
      - [Examples](#fig_ex)
         - [plots](#plots_ex)
-2. [Bunch of useful stuff](#random)
+3. [Bunch of useful stuff](#random)
 
+
+## Compilers <a name="compilers"></a>
+- pdflatex : simplest compiler 
+- xlatex : access to all the fonts installed on the computer
+- lualatex : when running heavy compilation 
 
 
 ## Figures <a name="fig"></a>
