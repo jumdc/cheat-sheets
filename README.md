@@ -23,3 +23,4 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 
 ### Others
 - [LaTeX](https://github.com/jumdc/cheat-sheets/blob/main/others/latex.md)
+- [label-studio](https://github.com/jumdc/cheat-sheets/blob/main/others/labelling-data.md)
