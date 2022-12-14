@@ -29,7 +29,7 @@ python src/train.py ++trainer.max_epochs=2 ++datamodule.videos_id=[[\'13025\',\'
 -   `interpolation`: ${foo.bar}, ${oc.env:USER,me}
 
 # Instantiate objects or callables <a name="objects"></a>
-## Easy example
+### Easy example
 - in the configuration file 
 ```yaml
 model : 
@@ -52,4 +52,28 @@ model :
  - pretrained: True
 ```
 
-# Group configurations
+# Group configurations <a name="groups"></a>
+
+In pratice, it's more conveniant to have multiple specifying different types of model.  
+
+In order to do that, we first group the config files in the `config` folder containing the `config.yaml` file and a `model` folder containing the different models `small.yaml` and `large.yaml`.
+```
+main.py
+configs/
+|  config.yaml --> Main configuration
+|  classifiers/
+|  | small.yaml --> Small classifier
+|  |  large.yaml --> Large classifier
+```
+
+In the `config.yaml` we specify a default value for our classifeir : 
+```yaml
+defaults: 
+ - _self_
+ - classifier: small
+```
+
+We can override its value at any time :
+```bash 
+python main.py classifier=large
+```
