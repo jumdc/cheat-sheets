@@ -24,7 +24,7 @@ ls | grep 0.png | head -n 10
 
 running python code in background & keeping the output : 
 ```bash
-nohup python3 preprocessing/preprocessing_parts.py > output_preprocess_20h57.log
+python3 preprocessing/preprocessing_parts.py > output_preprocess_20h57.log
 ```
 Executes 1.py in background & wirte the stout to the file 1.ouput. 
 
