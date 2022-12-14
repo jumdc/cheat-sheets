@@ -2,6 +2,8 @@
 ## summary
 1. [Change variables](#change)
 2. [Override settings or special characters](#spe)
+3. [Instantiate object or callables](#objects)
+4. [Configuration groups](#groups)
 
 
 # change variable <a name="change"> </a>
@@ -26,3 +28,28 @@ python src/train.py ++trainer.max_epochs=2 ++datamodule.videos_id=[[\'13025\',\'
 -   `dot_path`: foo.bar
 -   `interpolation`: ${foo.bar}, ${oc.env:USER,me}
 
+# Instantiate objects or callables <a name="objects"></a>
+## Easy example
+- in the configuration file 
+```yaml
+model : 
+ - _target_: torchvision.models.alexnet
+```
+
+- in the .py : 
+```python 
+import torch
+from hydra.utils import instantiate
+
+net = instantiate(cfg.model)
+```
+
+⚠️ It's possible to pass parameters by adding additional key to the configuration : 
+
+```yaml
+model : 
+ - _target_: torchvision.models.alexnet
+ - pretrained: True
+```
+
+# Group configurations
