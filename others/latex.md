@@ -6,7 +6,8 @@
      - [Examples](#fig_ex)
         - [plots](#plots_ex)
 3. [Bibliography](#biblio)
-4. [Bunch of useful stuff](#random)
+4. [Presentation & beamer](#prez)
+5. [Bunch of useful stuff](#random)
 
 
 ## Compilers <a name="compilers"></a>
@@ -96,7 +97,17 @@ time;acc
     \end{axis}
 \end{tikzpicture}
 ```
+## Bibliography : bibilatex <a name="biblio"></a>
+Workflow : use a bibtex fie (can export a bibtex file from a zotero folder
 
+### Package options (styling the bibliography)
+- `<style>` : style of bibliography and citations
+numeric : [1], alphabetic : [TS00]
+- `<sorting>` : bibliography sort order
+
+## Presentation : beamer <a name="beamer"></a>
+
+### Set the theme
 
 ## Bunch of useful stuff <a name="random"></a>
 - `standalone`
@@ -111,11 +122,5 @@ The minimal LaTeX class witth just the object (by default : generates a pdf but 
     -  `"latex-workshop.latex.recipe.default": "pdflatex 🔃"`
     -  main *recipe* in the settings : `latex-workshop.latex.recipes`
 
-## Bibliography : bibilatex <a name="biblio"></a>
-Workflow : use a bibtex fie (can export a bibtex file from a zotero folder
 
-### Package options (styling the bibliography)
-- `<style>` : style of bibliography and citations
-numeric : [1], alphabetic : [TS00]
-- `<sorting>` : bibliography sort order
 
