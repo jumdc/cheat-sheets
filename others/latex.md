@@ -1,22 +1,26 @@
 ![LaTeX_logo](https://user-images.githubusercontent.com/62952163/206713523-88b58654-567d-4212-b450-c97dc4d00a0c.png)
 
 ## Table of content
-1. [Compilers](#compilers)
-2. [Figures](#fig)
-     - [Examples](#fig_ex)
-        - [plots](#plots_ex)
-3. [Bibliography](#biblio)
-4. [Presentation & beamer](#prez)
-5. [Bunch of useful stuff](#random)
+- [Table of content](#table-of-content)
+- [Compilers](#compilers)
+- [Figures](#figures)
+  - [Nodes](#nodes)
+  - [Examples](#examples)
+    - [Plots ](#plots-)
+- [Bibliography : bibilatex ](#bibliography--bibilatex-)
+  - [Package options (styling the bibliography)](#package-options-styling-the-bibliography)
+- [Creating commands](#creating-commands)
+- [Snippets](#snippets)
+- [Bunch of useful stuff](#bunch-of-useful-stuff)
 
 
-## Compilers <a name="compilers"></a>
+## Compilers 
 - pdflatex : simplest compiler 
 - xlatex : access to all the fonts installed on the computer
 - lualatex : when running heavy compilation 
 
 
-## Figures <a name="fig"></a>
+## Figures 
  **tikz**, **pgfplots** ([Documentation](https://ctan.mines-albi.fr/graphics/pgf/contrib/pgfplots/doc/pgfplots.pdf)).
 
 - Create a separate folder for pictures (.tex files for each figure by itself) & for the data; 
@@ -33,7 +37,7 @@
 \begin{tikzpicture}[every node/.style={font=\footnotesize}]
 ```
 
-### Examples <a name="fig_ex"></a>
+### Examples 
 - Do not need to have the env (`begin{} ..`) for a small figure 
 
 ```latex
@@ -105,11 +109,24 @@ Workflow : use a bibtex fie (can export a bibtex file from a zotero folder
 numeric : [1], alphabetic : [TS00]
 - `<sorting>` : bibliography sort order
 
-## Presentation : beamer <a name="beamer"></a>
 
-### Set the theme
+##  Creating commands 
+- Initialize the commands
+```latex
+\newcommand{\myparameter}{\beta}  % to declare a variables
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\derivative}[3][]{\frac{\dd^{#1} #3}{\dd #1^{#1}}} % #2 : define the seconds argument 
+```
+- Call the command : 
+```latex
+{\derivative{2}{f}{y}}
+```
 
-## Bunch of useful stuff <a name="random"></a>
+##  Snippets
+we can prepare shortcuts and snippets and in vscode : `configure user settings`
+
+
+## Bunch of useful stuff 
 - `standalone`
 The minimal LaTeX class witth just the object (by default : generates a pdf but can also (create a png with ImageMagic))
 
