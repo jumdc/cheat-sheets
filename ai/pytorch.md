@@ -1,21 +1,22 @@
-# Pytorch & lightning cheatsheet 
+﻿# Pytorch & lightning cheatsheet 
 
 - [Pytorch \& lightning cheatsheet](#pytorch--lightning-cheatsheet)
 - [Introduction](#introduction)
-  - [PyTorch vs TensorFlow](#pytorch-vs-tensorflow)
-  - [Tensors](#tensors)
-    - [Standard operations](#standard-operations)
+	- [PyTorch vs TensorFlow](#pytorch-vs-tensorflow)
+	- [Tensors](#tensors)
+		- [Standard operations](#standard-operations)
 - [Interacting with data](#interacting-with-data)
-  - [`dataset`, PyTorch class](#dataset-pytorch-class)
-  - [`dataloader`, PyTorch](#dataloader-pytorch)
-  - [`dataModule`,  Lightning](#datamodule--lightning)
+	- [`dataset`, PyTorch class](#dataset-pytorch-class)
+	- [`dataloader`, PyTorch](#dataloader-pytorch)
+	- [`dataModule`,  Lightning](#datamodule--lightning)
 - [The network](#the-network)
-  - [designing the network](#designing-the-network)
-  - [`nn.sequential`](#nnsequential)
-  - [The optimizers](#the-optimizers)
+	- [designing the network](#designing-the-network)
+	- [`nn.sequential`](#nnsequential)
+	- [The optimizers](#the-optimizers)
 - [Losses](#losses)
-  - [BCEWithLogitsLoss : Binary Cross Entropy](#bcewithlogitsloss--binary-cross-entropy)
-  - [Cross Entropy loss](#cross-entropy-loss)
+	- [BCEWithLogitsLoss : Binary Cross Entropy](#bcewithlogitsloss--binary-cross-entropy)
+	- [Cross Entropy loss](#cross-entropy-loss)
+- [Steps to follow to train a neural network](#steps-to-follow-to-train-a-neural-network)
 
 
 
@@ -132,3 +133,23 @@ What learning rate to use ? $e-3$
 This loss combines a Sigmoid layer and the BCELoss in one single class. This version is more numerically stable than using a plain Sigmoid followed by a BCELoss as, by combining the operations into one layer, we take advantage of the log-sum-exp trick for numerical stability.
 
 ## Cross Entropy loss
+
+
+# Steps to follow to train a neural network 
+[A recipe for training neural networks](https://karpathy.github.io/2019/04/25/recipe/)
+
+At each step, we make concrete hypothesis about what will happen and then either validate them or investigate further why it won't work. 
+
+1. Become one with the data
+2. Set-up an end-to-end training/eval skeleton \& and get dumb baselines 
+	- fix a random seed `pytorch_lightning.seed_everything(1999)`
+	- verify loss @init, example for a softmax : $-log(\frac{1}{n_{classes}})$  
+  
+    	Example of values : 
+		- $n_{classes} = 2$, $0.30$
+	- init well 
+	- input-independant baseline (e.g all input equal to 0)
+	- overfit one batches
+	- visualize the dataset just before the network 
+	- visualize pred dynamics on val set
+  
