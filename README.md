@@ -11,6 +11,7 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 - [Tmux](https://github.com/jumdc/cheat-sheets/blob/main/cs/tmux.md)
 - [Hydra](https://github.com/jumdc/cheat-sheets/blob/main/cs/hydra.md)
 - [Shapes in numpy](https://github.com/jumdc/cheat-sheets/blob/main/cs/numpy.md)
+- [Multithreading and multiprocessing in Python](
 
 ### AI 
 - [Basic ML](https://github.com/jumdc/cheat-sheets/blob/main/ai/basic-ml.md)
