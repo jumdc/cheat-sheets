@@ -12,7 +12,6 @@ Multiprocessing and multithreading are two ways of achieving distributed computi
 
 **Multiprocessing**
 > Refers to the ability of a system to run multiple processors concurrently. 
->
 
 ## Multiprocesing
 Multiprocessing can be implemented via the `multiprocessing` Python built-in library. 
