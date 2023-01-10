@@ -1,11 +1,12 @@
 ﻿# Basic ML
 
-## Summary 
-1. [DB-Scan](#db-scan)
-2. [RandomForest](#rf)
+- [Basic ML](#basic-ml)
+  - [db-scan](#db-scan)
+  - [random forest](#random-forest)
+  - [ROC](#roc)
 
 
-## db-scan <a name="db-scan"></a>
+## db-scan 
 
 **DBSCAN** is a clustering method that is used in machine learning to separate clusters of high density from clusters of low density region. Its a very efficient clustering algorithm as it used to segregate the data points with high density observations vs data points of low density observations in form of various clusters.
 
@@ -15,7 +16,7 @@ default=0.5
 - `min_samples` : The number of samples (or total weight) in a neighborhood for a point to be considered as a core point. This includes the point itself.
 default=5
 
-## random forest <a name="rf"></a>
+## random forest 
 
 Hyperparemeters : 
 - `min_samples_split` : minimum requiered number of observations in order to split it. B
@@ -28,3 +29,15 @@ The tree is prone to overfitting when it's set very low.
 - `max_samples`: determines what fraction of the original dataset is given to an individual tree. 
 When it's decreased : takes less time to train. (Works when bootstrap is set to true). 
 - `max_features`
+
+## ROC 
+
+**ROC** curve shows the performance of a classification model at all classification thresholds.  
+- $recall = \frac{TP}{TP + FN}$  
+- $fpr = \frac{FP}{FP + TN}$
+
+ROC curve : recall vs FRP at different classification threshold. 
+
+**Examples** :  
+- if the threshold is $0.5$, and the predicted proba is $0.49$ then the outcome is negative
+- if the threshold is $0.3$, and the predicted proba is $0.49$ then the outcome is positive
