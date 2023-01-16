@@ -2,10 +2,11 @@
 
 - [Basic ML](#basic-ml)
   - [db-scan](#db-scan)
+    - [Hyperparameters :](#hyperparameters-)
   - [Random Forest](#random-forest)
     - [Hyperparemeters :](#hyperparemeters-)
   - [SVM](#svm)
-    - [Hyperparameters :](#hyperparameters-)
+    - [Hyperparameters](#hyperparameters)
     - [Kernels specifications](#kernels-specifications)
   - [ROC](#roc)
 
@@ -14,7 +15,7 @@
 
 **DBSCAN** is a clustering method that is used in machine learning to separate clusters of high density from clusters of low density region. Its a very efficient clustering algorithm as it used to segregate the data points with high density observations vs data points of low density observations in form of various clusters.
 
-hyperparameters : 
+### Hyperparameters : 
 - `eps` :  The maximum distance between two samples for one to be considered as in the neighborhood of the other. This is not a maximum bound on the distances of points within a cluster. This is the most important DBSCAN parameter to choose appropriately for your data set and distance function.
 default=0.5
 - `min_samples` : The number of samples (or total weight) in a neighborhood for a point to be considered as a core point. This includes the point itself.
@@ -46,7 +47,7 @@ A soft margin SVM tries to solve two optimizations problems:
 There is a trade-off between those two goals. The decision boundary might be very close to one class to correctly label all points in the training set. However : might result in a low accuracy. 
 However, a far decision boundary might result in misclassifications. 
 
-### Hyperparameters : 
+### Hyperparameters 
 -  `kernel` : which kernel ? relates to the kernel trick. The inputs are original features and the output is a similarity measure in the new feature space. Useful when the data are not linearly seperable. 
 -  `C` : adds a penalty to each misclassified points. Thus if c is small, the penalty for a misclassification point is low and the boundary with large margin tend to be chosen. And if C is large, high penalty for misclassified points -> boundary wiht smaller margins. 
 -  `gamma` : controls the distance of influence of a single point. Low values of gamma indicates a large similarity radius which results in more points being grouped together. For high values of gamma, the points need to be very close to each other in order to be considered in the same group. Large gamma are likely to end up in overfitting. 
