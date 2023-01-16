@@ -2,7 +2,11 @@
 
 - [Basic ML](#basic-ml)
   - [db-scan](#db-scan)
-  - [random forest](#random-forest)
+  - [Random Forest](#random-forest)
+    - [Hyperparemeters :](#hyperparemeters-)
+  - [SVM](#svm)
+    - [Hyperparameters :](#hyperparameters-)
+    - [Kernels specifications](#kernels-specifications)
   - [ROC](#roc)
 
 
@@ -16,9 +20,9 @@ default=0.5
 - `min_samples` : The number of samples (or total weight) in a neighborhood for a point to be considered as a core point. This includes the point itself.
 default=5
 
-## random forest 
+## Random Forest 
 
-Hyperparemeters : 
+### Hyperparemeters : 
 - `min_samples_split` : minimum requiered number of observations in order to split it. B
 When the value is set to default (2) : the tree keeps on splitting until the nodes are completely pure which induce a tree prone to overfitting. Thus incresing this hyperparameter can tackle overfitting. 
 - `max_depth` : maximum depth of the tree. It defines the longest possible path between the root node and the leaf node. 
@@ -29,6 +33,37 @@ The tree is prone to overfitting when it's set very low.
 - `max_samples`: determines what fraction of the original dataset is given to an individual tree. 
 When it's decreased : takes less time to train. (Works when bootstrap is set to true). 
 - `max_features`
+
+## SVM 
+SVM creates a decision boundary which makes the distinction between two or more classes. 
+
+To overcome overfitting (very precise decision boundary on the training data), the concept of 'soft boundary' was introduced. It allows some examples to be misclassified. It often results in a better generalized model. 
+
+A soft margin SVM tries to solve two optimizations problems: 
+- Increase the distance of decision boundary to classes
+- Maximize the number of points that are correctly classified in the training set
+
+There is a trade-off between those two goals. The decision boundary might be very close to one class to correctly label all points in the training set. However : might result in a low accuracy. 
+However, a far decision boundary might result in misclassifications. 
+
+### Hyperparameters : 
+-  `kernel` : which kernel ? relates to the kernel trick. The inputs are original features and the output is a similarity measure in the new feature space. Useful when the data are not linearly seperable. 
+-  `C` : adds a penalty to each misclassified points. Thus if c is small, the penalty for a misclassification point is low and the boundary with large margin tend to be chosen. And if C is large, high penalty for misclassified points -> boundary wiht smaller margins. 
+-  `gamma` : controls the distance of influence of a single point. Low values of gamma indicates a large similarity radius which results in more points being grouped together. For high values of gamma, the points need to be very close to each other in order to be considered in the same group. Large gamma are likely to end up in overfitting. 
+  
+With a linear kernel only  `C`  needs to be optimize. 
+Otherwise both **C** and **gamma** need to be taken into account. 
+
+Examples of values : 
+$0.0001 < \gamma < 10$ and  $0.1 < C < 100$. 
+
+
+
+**ATTENTION : features need to normalize**
+
+### Kernels specifications
+- **radial basis function** (RBF), highly popular due to its similar with a gaussian distribution 
+
 
 ## ROC 
 
