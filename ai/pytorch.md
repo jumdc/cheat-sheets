@@ -2,21 +2,22 @@
 
 - [Pytorch \& lightning cheatsheet](#pytorch--lightning-cheatsheet)
 - [Introduction](#introduction)
-	- [PyTorch vs TensorFlow](#pytorch-vs-tensorflow)
-	- [Tensors](#tensors)
-		- [Standard operations](#standard-operations)
+  - [PyTorch vs TensorFlow](#pytorch-vs-tensorflow)
+  - [Tensors](#tensors)
+    - [Standard operations](#standard-operations)
 - [Interacting with data](#interacting-with-data)
-	- [`dataset`, PyTorch class](#dataset-pytorch-class)
-	- [`dataloader`, PyTorch](#dataloader-pytorch)
-	- [`dataModule`,  Lightning](#datamodule--lightning)
+  - [`dataset`, PyTorch class](#dataset-pytorch-class)
+  - [`dataloader`, PyTorch](#dataloader-pytorch)
+  - [`dataModule`,  Lightning](#datamodule--lightning)
 - [The network](#the-network)
-	- [designing the network](#designing-the-network)
-	- [`nn.sequential`](#nnsequential)
-	- [The optimizers](#the-optimizers)
+  - [designing the network](#designing-the-network)
+  - [`nn.sequential`](#nnsequential)
+  - [The optimizers](#the-optimizers)
 - [Losses](#losses)
-	- [BCEWithLogitsLoss : Binary Cross Entropy](#bcewithlogitsloss--binary-cross-entropy)
-	- [Cross Entropy loss](#cross-entropy-loss)
+  - [BCEWithLogitsLoss : Binary Cross Entropy](#bcewithlogitsloss--binary-cross-entropy)
+  - [Cross Entropy loss](#cross-entropy-loss)
 - [Steps to follow to train a neural network](#steps-to-follow-to-train-a-neural-network)
+  - [normalization](#normalization)
 
 
 
@@ -153,3 +154,5 @@ At each step, we make concrete hypothesis about what will happen and then either
 	- visualize the dataset just before the network 
 	- visualize pred dynamics on val set
   
+  ## normalization 
+  If a pre-train model is used, use the same normalization that was used for the pre-training. 
