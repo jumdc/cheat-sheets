@@ -154,5 +154,13 @@ At each step, we make concrete hypothesis about what will happen and then either
 	- visualize the dataset just before the network 
 	- visualize pred dynamics on val set
   
-  ## normalization 
-  If a pre-train model is used, use the same normalization that was used for the pre-training. 
+## normalization 
+If a pre-train model is used, use the same normalization that was used for the pre-training. 
+
+Example for the kinetics dataset : 
+```python
+transform=Compose([
+  Lambda(lambda x: x / 255.0),
+  Normalize((0.45, 0.45, 0.45), (0.225, 0.225, 0.225))
+])
+```
