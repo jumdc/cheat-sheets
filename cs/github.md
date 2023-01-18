@@ -1,12 +1,16 @@
- <img width="300" alt="octocat" src="https://user-images.githubusercontent.com/62952163/205496926-f04a3e92-c632-4619-901d-6a689ff43fe2.png">  
+ <img width="300" alt="octocat" src="https://user-images.githubusercontent.com/62952163/205496926-f04a3e92-c632-4619-901d-6a689ff43fe2.png">    
  
  
-## Summary 
-1. [git fecth & pull](#fetch)
-2. [git merge](#merge)
-3. [.gitignore](#ignore)
-4. [remove git dir](#remove)
-5. [store git credentials](#credantials)
+
+- [git fetch \& pull ](#git-fetch--pull-)
+  - [git fetch](#git-fetch)
+  - [git pull](#git-pull)
+- [git merge](#git-merge)
+- [.gitignore  ](#gitignore--)
+- [remove git dir](#remove-git-dir)
+- [store credentials](#store-credentials)
+- [remove last commit](#remove-last-commit)
+
 
 
 ## git fetch & pull <a name="fetch"></a>
@@ -28,3 +32,7 @@ Create a file `.gitignore`, add directories wished to be ignored from your git r
 
 ## store credentials 
 `git config --global credential.helper store`
+
+## remove last commit
+- preserve the changes : ` git reset --soft HEAD~1`  
+- if you don't want to keep the changes : `git reset --hard HEAD~1`

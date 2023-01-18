@@ -33,3 +33,11 @@ new_original = reshaped.reshape(
     reshaped.shape[0], reshaped.shape[1] // original.shape[2], original.shape[2]
     )
 ```
+## init an array
+```python
+res = np.array([])
+res = np.append(
+    res,
+    array_to_append
+)
+```
