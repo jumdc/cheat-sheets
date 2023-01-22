@@ -4,11 +4,16 @@
   - [db-scan](#db-scan)
     - [Hyperparameters](#hyperparameters)
   - [Random Forest](#random-forest)
+    - [Bagging aka bootstrap aggregating](#bagging-aka-bootstrap-aggregating)
     - [Hyperparemeters](#hyperparemeters)
   - [SVM](#svm)
     - [Hyperparameters](#hyperparameters-1)
     - [Kernels specifications](#kernels-specifications)
-  - [ROC](#roc)
+  - [AdaBoost](#adaboost)
+    - [Boosting](#boosting)
+    - [Definition](#definition)
+  - [Logistic regression](#logistic-regression)
+    - [ROC](#roc)
 
 
 ## db-scan 
@@ -22,6 +27,9 @@ default=0.5
 default=5
 
 ## Random Forest 
+
+### Bagging aka bootstrap aggregating
+
 
 ### Hyperparemeters 
 - `min_samples_split` : minimum requiered number of observations in order to split it. B
@@ -66,7 +74,21 @@ $0.0001 < \gamma < 10$ and  $0.1 < C < 100$.
 - **radial basis function** (RBF), highly popular due to its similar with a gaussian distribution 
 
 
-## ROC 
+## AdaBoost 
+### Boosting
+
+**Boosting** try to answer the question : "Can a set of weak learners create a single strong learner?". 
+A weak classifier being a classifier that is only slightly better that a random classifier. 
+Most boosting algorithms consist of iteratively learning weak classifier with respect to a distribution and adding them to a final strong classifier. 
+
+### Definition 
+
+AdaBoost is adaptive in the sense that subsequent weak learners are tweaked in favor of those instances misclassified by previous classifiers.
+Although AdaBoost is typically used to combine weak base learners (such as decision stumps), it has been shown that it can also effectively combine strong base learners (such as deep decision trees), producing an even more accurate model
+
+## Logistic regression 
+
+### ROC 
 
 **ROC** curve shows the performance of a classification model at all classification thresholds.  
 - $recall = \frac{TP}{TP + FN}$  
