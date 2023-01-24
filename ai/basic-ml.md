@@ -13,7 +13,11 @@
     - [Boosting](#boosting)
     - [Definition](#definition)
   - [Logistic regression](#logistic-regression)
-    - [ROC](#roc)
+    - [Regularization](#regularization)
+  - [ROC](#roc)
+- [Feature Selection](#feature-selection)
+  - [Filter methods](#filter-methods)
+    - [Variance](#variance)
 
 
 ## db-scan 
@@ -88,7 +92,10 @@ Although AdaBoost is typically used to combine weak base learners (such as decis
 
 ## Logistic regression 
 
-### ROC 
+### Regularization 
+- elastic net : combination between $l1$ and $l2$ regularization. 
+
+## ROC 
 
 **ROC** curve shows the performance of a classification model at all classification thresholds.  
 - $recall = \frac{TP}{TP + FN}$  
@@ -104,3 +111,14 @@ ROC curve : recall vs FRP at different classification threshold.
 <img width="917" alt="perfect ROC" src="https://user-images.githubusercontent.com/62952163/214248947-caf3af53-f5b4-41be-82f9-eb567b20bb19.png">
 
 <img width="917" alt="good ROC" src="https://user-images.githubusercontent.com/62952163/214249078-472955c1-acf6-4552-a308-c670e249b381.png">
+
+# Feature Selection 
+
+## Filter methods 
+> pick up the intrinsic properties of the features measured via univariate statistics instead of cross-validation performance
+
+### Variance
+
+The variance threshold is a simple baseline approach to feature selection.
+It removes all features which variance doesn’t meet some threshold. By default, it removes all zero-variance features, i.e., features that have the same value in all samples. We assume that features with a higher variance may contain more useful information, but note that we are not taking the relationship between feature variables or feature and target variables into account, which is one of the drawbacks of filter methods.
+
