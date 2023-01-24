@@ -99,3 +99,8 @@ ROC curve : recall vs FRP at different classification threshold.
 **Examples** :  
 - if the threshold is $0.5$, and the predicted proba is $0.49$ then the outcome is negative
 - if the threshold is $0.3$, and the predicted proba is $0.49$ then the outcome is positive
+- if the threshold is $0.3$, and the predicted proba is $0.49$ then the outcome is positive
+
+<img width="917" alt="perfect ROC" src="https://user-images.githubusercontent.com/62952163/214248947-caf3af53-f5b4-41be-82f9-eb567b20bb19.png">
+
+<img width="917" alt="good ROC" src="https://user-images.githubusercontent.com/62952163/214249078-472955c1-acf6-4552-a308-c670e249b381.png">
