@@ -1,17 +1,19 @@
-﻿# Basic ML
+﻿Table of contents : 
 
-- [Basic ML](#basic-ml)
+- [Generalities](#generalities)
+    - [Bias and variance in machine learning](#bias-and-variance-in-machine-learning)
+    - [Ensemble models](#ensemble-models)
+- [Models](#models)
   - [db-scan](#db-scan)
     - [Hyperparameters](#hyperparameters)
   - [Random Forest](#random-forest)
-    - [Bagging aka bootstrap aggregating](#bagging-aka-bootstrap-aggregating)
     - [Hyperparemeters](#hyperparemeters)
   - [SVM](#svm)
     - [Hyperparameters](#hyperparameters-1)
     - [Kernels specifications](#kernels-specifications)
   - [AdaBoost](#adaboost)
-    - [Boosting](#boosting)
     - [Definition](#definition)
+    - [Hyperparameteres](#hyperparameteres)
   - [Logistic regression](#logistic-regression)
     - [Regularization](#regularization)
   - [ROC](#roc)
@@ -20,6 +22,45 @@
     - [Variance](#variance)
 
 
+# Generalities 
+
+### Bias and variance in machine learning 
+   
+$error = variance + bias + noise$
+
+- Bias 
+> Bias is considered a systematic error that occurs in the machine learning model itself due to incorrect assumptions in the ML process.
+
+Technically, we can define bias as the error between average model prediction and the ground truth. Moreover, it describes how well the model matches the training data set:
+
+A low bias model will closely match the training data set
+
+- Variance
+> Variance refers to the changes in the model when using different portions of the training data set. 
+
+In other words, variance is the variability in the model prediction—how much the ML function can adjust depending on the given data set.
+
+- Bias vs Variance 
+Bias and variance are inversely connected. It is impossible to have an ML model with a low bias and a low variance.
+
+### Ensemble models
+> What Is Ensemble Learning?
+Ensemble learning is a widely-used and preferred machine learning technique in which multiple individual models, often called base models, are combined to produce an effective optimal prediction model.
+
+Several types of ensemble models exist : 
+- Bagging (Bootstrap aggregating)
+
+Bootstrapping is the method of randomly creating samples of data out of a population with replacement to estimate a population parameter.
+
+Reduces the variance of a model. 
+- Boosting 
+> **Boosting** try to answer the question : "Can a set of weak learners create a single strong learner?". 
+A weak classifier being a classifier that is only slightly better that a random classifier. 
+Most boosting algorithms consist of iteratively learning weak classifier with respect to a distribution and adding them to a final strong classifier. 
+
+Redues the bias of a  model (fits more closely to the data)
+  
+# Models
 ## db-scan 
 
 **DBSCAN** is a clustering method that is used in machine learning to separate clusters of high density from clusters of low density region. Its a very efficient clustering algorithm as it used to segregate the data points with high density observations vs data points of low density observations in form of various clusters.
@@ -32,8 +73,7 @@ default=5
 
 ## Random Forest 
 
-### Bagging aka bootstrap aggregating
-
+Bagging with as base estimator decision trees. 
 
 ### Hyperparemeters 
 - `min_samples_split` : minimum requiered number of observations in order to split it. B
@@ -79,16 +119,20 @@ $0.0001 < \gamma < 10$ and  $0.1 < C < 100$.
 
 
 ## AdaBoost 
-### Boosting
-
-**Boosting** try to answer the question : "Can a set of weak learners create a single strong learner?". 
-A weak classifier being a classifier that is only slightly better that a random classifier. 
-Most boosting algorithms consist of iteratively learning weak classifier with respect to a distribution and adding them to a final strong classifier. 
 
 ### Definition 
 
-AdaBoost is adaptive in the sense that subsequent weak learners are tweaked in favor of those instances misclassified by previous classifiers.
-Although AdaBoost is typically used to combine weak base learners (such as decision stumps), it has been shown that it can also effectively combine strong base learners (such as deep decision trees), producing an even more accurate model
+
+An AdaBoost classifier begins by fitting a classifier on the original dataset and then fits additional copies of the classifier on the same dataset but where the weights of incorrectly classified instances are adjusted such that subsequent classifiers focus more on difficult cases.
+
+AKA : instances are attributed weights to give them more or less importance depending on wether they were correctly classified or not. The weights are update at each iteration accoriding to a learning rate. 
+
+### Hyperparameteres
+- `estimator`: estimator used
+- `n_estimators`, number of subsequent estimators fitted. between : [1, inf)
+- `learning_rate`: this parameter is provided to shrink the contribution of each classifier.
+
+
 
 ## Logistic regression 
 
