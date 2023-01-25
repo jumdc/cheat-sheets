@@ -1,4 +1,7 @@
-﻿Table of contents : 
+﻿![téléchargement](https://user-images.githubusercontent.com/62952163/214655559-a65dd17b-cf6d-4a9f-bc23-95f1709e21fc.jpeg)
+
+ 
+ Table of contents : 
 
 - [Generalities](#generalities)
     - [Bias and variance in machine learning](#bias-and-variance-in-machine-learning)
