@@ -6,6 +6,7 @@
 - [Generalities](#generalities)
     - [Bias and variance in machine learning](#bias-and-variance-in-machine-learning)
     - [Ensemble models](#ensemble-models)
+    - [Probability calculus](#probability-calculus)
 - [Models](#models)
   - [db-scan](#db-scan)
     - [Hyperparameters](#hyperparameters)
@@ -63,6 +64,10 @@ Most boosting algorithms consist of iteratively learning weak classifier with re
 
 Redues the bias of a  model (fits more closely to the data)
   
+### Probability calculus
+- Combinations  
+Number of combination of k among n : $\binom{n}{k} = \frac{n!}{ k!( n-k)!}$
+
 # Models
 ## db-scan 
 
