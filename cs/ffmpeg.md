@@ -1,15 +1,27 @@
 ﻿# ffmpeg
 
-## Summary 
-1. [Information from multimedia streams](#info)
-2. [Processing frames](#frames)
-  - [Trim video from frames numbers](#trimframe)
-  - [Trim video from start and end time](#trimtime)
-3. [Processing audio](#audio)
-  - [Extract various audio tracks](#basicaudio)
-  - [Raw extract](#rawextract)
+- [ffmpeg](#ffmpeg)
+- [Convert videos to the appropriate format](#convert-videos-to-the-appropriate-format)
+- [Information about video input ](#information-about-video-input-)
+- [Processing frames ](#processing-frames-)
+  - [Trim from video frames number ](#trim-from-video-frames-number-)
+  - [Trim from a start time and an end time ](#trim-from-a-start-time-and-an-end-time-)
+- [Processing audio ](#processing-audio-)
+  - [Various audio tracks ](#various-audio-tracks-)
+    - [Check the audio tracks](#check-the-audio-tracks)
+    - [Extract as wav](#extract-as-wav)
+    - [For the following track :](#for-the-following-track-)
+  - [Raw extract ](#raw-extract-)
 
-# 1. Information about video input <a name="info"></a>
+
+# Convert videos to the appropriate format
+
+```bash
+ffmpeg -i input.vob -vf format=yuv420p output.mp4 
+```
+
+
+# Information about video input <a name="info"></a>
 **Ffprobe** gathers information from multimedia streams. 
 ```{bash}
 $ ffprobe \
@@ -18,7 +30,7 @@ $ ffprobe \
 This command allows to determine how many audio tracks the input contains. 
 Check for the the line containing : 'Stream' and 'Audio'.
 
-# 2. Processing frames <a name="frames"></a>
+# Processing frames <a name="frames"></a>
 ## Trim from video frames number <a name="trimframe"></a>
 ```{bash}
 $ ffmpeg \
@@ -47,7 +59,7 @@ $ ffmpeg \
   -start_number 98 #number to start the output \
   13025/%04d.png 
 ```
-# 3. Processing audio <a name="audio"></a>
+# Processing audio <a name="audio"></a>
 ## Various audio tracks <a name="basicaudio"></a>
 ### Check the audio tracks 
 ```{bash}
@@ -93,5 +105,3 @@ more on -c :
 We take the original input and copy it straight to the output
 
 
-
-> Written with [StackEdit](https://stackedit.io/).
