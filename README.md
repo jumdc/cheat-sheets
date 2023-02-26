@@ -12,7 +12,7 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 - [Hydra](https://github.com/jumdc/cheat-sheets/blob/main/cs/hydra.md)
 - [Shapes in numpy](https://github.com/jumdc/cheat-sheets/blob/main/cs/numpy.md)
 - [Multithreading and multiprocessing in Python](https://github.com/jumdc/cheat-sheets/blob/main/cs/multi.md)
-- [cpp](https://github.com/jumdc/cheat-sheets/blob/main/cs/cpp.md)
+- [C++](https://github.com/jumdc/cheat-sheets/blob/main/cs/cpp.md)
 
 ### AI 
 - [Basic ML](https://github.com/jumdc/cheat-sheets/blob/main/ai/basic-ml.md)
