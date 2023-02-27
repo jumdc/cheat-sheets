@@ -24,6 +24,8 @@
 - [Feature Selection](#feature-selection)
   - [Filter methods](#filter-methods)
     - [Variance](#variance)
+- [Cross-validation](#cross-validation)
+    - [Stratified KFOLD](#stratified-kfold)
 
 
 # Generalities 
@@ -174,3 +176,11 @@ ROC curve : recall vs FRP at different classification threshold.
 The variance threshold is a simple baseline approach to feature selection.
 It removes all features which variance doesn’t meet some threshold. By default, it removes all zero-variance features, i.e., features that have the same value in all samples. We assume that features with a higher variance may contain more useful information, but note that we are not taking the relationship between feature variables or feature and target variables into account, which is one of the drawbacks of filter methods.
 
+# Cross-validation 
+
+### Stratified KFOLD
+[Implementation of n-fold which is designed to](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold) : 
+- Generate test sets such that all contain the same distribution of classes, or as close as possible.
+- Be invariant to class label: relabelling y = ["Happy", "Sad"] to y = [1, 0] should not change the indices generated.
+- Preserve order dependencies in the dataset ordering, when shuffle=False: all samples from class k in some test set were contiguous in y, or separated in y by samples from classes other than k.
+- Generate test sets where the smallest and largest differ by at most one sample.
