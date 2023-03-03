@@ -115,18 +115,42 @@ It can be use to create nore logical arrangements in the code.
 To construct an [`Optimizer`](https://pytorch.org/docs/stable/optim.html#torch.optim.Optimizer "torch.optim.Optimizer") you have to give it an iterable containing the parameters (all should be `Variable`' s) to optimize. Then, you can specify optimizer-specific options such as the learning rate, weight decay, etc
 
 
-- **momentum**  
+
+
+### **SGD**  
+`optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)`
+
+Why **stochastic** ? Think of loss as an expectation over the full data distribution and we approximate the expectation via sampling.
+
+#### Problems : 
+- what if loss changes quickly in one direction and slowly in another (loss function has high condition number) ? The gradient has slow progression and jitter.
+- Saddle point & local miminum, in both case gradient can get stuck
+- Stochastic aspect : the gradients can be noisy 
+
+#### momentum  
+Momemtum can be an anwser the issues mention above  
 $W_{t+1} = W_t - V_t$  
 $V_t = \beta*V_{t-1} + \nu*\Delta(W_t)$
 
 Based on the *Exponential Weighted Average* which applies weighting factors which decrease exponetionaly. $s_t = \alpha*x_t + (1 - \alpha)*s_{t-1}$. The highest alpha the more we try to get an average of past data. 
 
 
-- **SGD**  
-`optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)`
-- **Adam**
-
 What learning rate to use ? $e-3$
+
+### **AdaGrad**
+Added element-wise scaling of the gradient absed on the historical sum of squares in each dimension, but why ? 
+Progress along 'steep' directions is damped and progress along 'flat' directions is accelerated. 
+
+$G += g_t * g_t$  
+$w_{t+1} = w_t - \eta \,\text{diag}(G)^{-1/2} g_t$
+
+But G will grow and grow, and has the effect of decaying the learning rate. 
+
+Variant : RMSProp "LeakAdagrad"
+
+### **Adam**
+Basicly : RMSProp + Momentum
+
 
 
 # Losses 
