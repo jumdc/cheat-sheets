@@ -7,7 +7,10 @@
       - [g++](#g)
       - [makefile](#makefile)
   - [Generalites](#generalites)
-      - [standard input \& ouput](#standard-input--ouput)
+    - [standard input \& ouput](#standard-input--ouput)
+    - [loops](#loops)
+    - [1d array](#1d-array)
+    - [n-d array](#n-d-array)
       - [arguments' function by values or reference ?](#arguments-function-by-values-or-reference-)
 
 ## Introduction
@@ -66,7 +69,7 @@ Make checks the update for us.
 
 ## Generalites
 
-#### standard input & ouput 
+### standard input & ouput 
 - standard input (reads from consol): `std::cin`
 - standard ouput (writes to console) : `std::cout`
 - standard error : `std::cerr`
@@ -74,6 +77,47 @@ Make checks the update for us.
 ```cpp
 std::cin >> i; // the double arrow follows the direction of the flow i.e from the console TO the variable
 std::cout << i << std::end1; // std::end1 puts '\n' at the end and flushes the stream
+```
+
+
+### loops  
+
+```cpp
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+```
+```cpp
+for (int i = 0, i < 3 ; i ++){
+  // block to be executed
+}
+```
+
+### 1d array
+
+> An array is a series of elements of the same type placed in contiguous memory locations that can be individually referenced by adding an index to a unique identifier.
+
+
+```cpp
+type name [elements];
+```
+
+```cpp
+int foo [5];
+int foo [5] = { 16, 2, 77, 40, 12071 };
+```
+
+
+### n-d array
+```cpp
+// This is not allowed!
+double MyFunction (double matrix[][], int rows, int columns) {
+  ...
+}
+// This is fine!
+double MyFunction (double **matrix, int rows, int columns) {
+  return matrix[0][0];
+}
 ```
 
 #### arguments' function by values or reference ?
