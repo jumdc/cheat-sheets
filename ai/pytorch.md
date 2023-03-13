@@ -13,11 +13,18 @@
   - [designing the network](#designing-the-network)
   - [`nn.sequential`](#nnsequential)
   - [The optimizers](#the-optimizers)
+    - [**SGD**](#sgd)
+      - [Problems :](#problems-)
+      - [momentum](#momentum)
+    - [**AdaGrad**](#adagrad)
+    - [**Adam**](#adam)
 - [Losses](#losses)
   - [BCEWithLogitsLoss : Binary Cross Entropy](#bcewithlogitsloss--binary-cross-entropy)
   - [Cross Entropy loss](#cross-entropy-loss)
 - [Steps to follow to train a neural network](#steps-to-follow-to-train-a-neural-network)
   - [normalization](#normalization)
+    - [why normalization ?](#why-normalization-)
+    - [normalization with pretrained net](#normalization-with-pretrained-net)
 
 
 
@@ -179,6 +186,15 @@ At each step, we make concrete hypothesis about what will happen and then either
 	- visualize pred dynamics on val set
   
 ## normalization 
+
+### why normalization ? 
+
+We want the data to be more amenable for efficient training. 
+In the following example, we visualize the training data where each axis is a features of the data set. (In matrix notation $X \in \R^{n*d}$ and here $d=2$.)
+
+
+### normalization with pretrained net
+
 If a pre-train model is used, use the same normalization that was used for the pre-training. 
 
 Example for the kinetics dataset : 
