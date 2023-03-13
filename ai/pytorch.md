@@ -194,6 +194,11 @@ In the following example, we visualize the training data where each axis is a fe
 
 ![Screenshot from 2023-03-13 15-06-05](https://user-images.githubusercontent.com/62952163/224727614-e9f67059-7a01-487c-ae87-3cb21fd4edfb.png)
 
+More precisely, it's linked with gradients. 
+If all the data is positive or neg so are the gradients and thus taking more steps to converge following one direction at a time. 
+
+Furthermore after normalization, the training set is less sensitive to small changes in weights and easier to optimize. 
+
 ### normalization with pretrained net
 
 If a pre-train model is used, use the same normalization that was used for the pre-training. 
@@ -201,7 +206,6 @@ If a pre-train model is used, use the same normalization that was used for the p
 Example for the kinetics dataset : 
 ```python
 transform=Compose([
-  Lambda(lambda x: x / 255.0),
   Normalize((0.45, 0.45, 0.45), (0.225, 0.225, 0.225))
 ])
 ```
