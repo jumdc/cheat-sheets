@@ -192,6 +192,7 @@ At each step, we make concrete hypothesis about what will happen and then either
 We want the data to be more amenable for efficient training. 
 In the following example, we visualize the training data where each axis is a features of the data set. (In matrix notation $X \in \R^{n*d}$ and here $d=2$.)
 
+![Screenshot from 2023-03-13 15-06-05](https://user-images.githubusercontent.com/62952163/224727614-e9f67059-7a01-487c-ae87-3cb21fd4edfb.png)
 
 ### normalization with pretrained net
 
