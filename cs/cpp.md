@@ -9,6 +9,8 @@
   - [Generalites](#generalites)
     - [standard input \& ouput](#standard-input--ouput)
     - [loops](#loops)
+    - [if statement](#if-statement)
+    - [Pointers](#pointers)
     - [1d array](#1d-array)
     - [n-d array](#n-d-array)
       - [arguments' function by values or reference ?](#arguments-function-by-values-or-reference-)
@@ -86,12 +88,42 @@ std::cout << i << std::end1; // std::end1 puts '\n' at the end and flushes the s
 for (statement 1; statement 2; statement 3) {
   // code block to be executed
 }
-```
-```cpp
+// example 
 for (int i = 0, i < 3 ; i ++){
   // block to be executed
 }
 ```
+
+
+### if statement
+
+```cpp
+if (condition) {
+  // block of code to be executed if the condition is true
+}
+else
+{
+  // block to be executed if the condition is false
+}
+```
+
+### Pointers
+
+> Pointers  
+> A pointer is a special type of variable that contains a memory address rather than a data value. A pointer is a special type of variable that contains a memory address rather than a data value
+
+We usually say that a pointer "points" to the location it is storing (the "pointee").
+
+```cpp
+int *ptr; // Declare integer pointer.
+ptr = new int; // Allocate some memory for the integer.
+*ptr = 5; // Dereference to initialize the pointee.
+*ptr = *ptr + 1; // We are dereferencing ptr in order
+                 // to add one to the value stored
+                 // at the ptr address.
+```
+
+NB : do not forget to initialize the "pointee". 
 
 ### 1d array
 
@@ -119,5 +151,7 @@ double MyFunction (double **matrix, int rows, int columns) {
   return matrix[0][0];
 }
 ```
+
+
 
 #### arguments' function by values or reference ?

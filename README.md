@@ -18,7 +18,7 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 - [Basic ML](https://github.com/jumdc/cheat-sheets/blob/main/ai/basic-ml.md)
 - [DL training steps](https://github.com/jumdc/cheat-sheets/blob/main/ai/dl-learning%20steps.md)
 - [Pytorch](https://github.com/jumdc/cheat-sheets/blob/main/ai/pytorch.md)
-- [wandb](https://github.com/jumdc/cheat-sheets/blob/main/ai/wandb.md)
+- [logger](https://github.com/jumdc/cheat-sheets/blob/main/ai/logger.md)
 
 ### Hardware
 - [GPUs, Nvidia & cuda](https://github.com/jumdc/cheat-sheets/blob/main/hardware/gpu.md)
