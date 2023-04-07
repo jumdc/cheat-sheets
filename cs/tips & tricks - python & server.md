@@ -1,12 +1,15 @@
 ﻿# Tips & tricks for using a server
 
+- [Tips \& tricks for using a server](#tips--tricks-for-using-a-server)
+  - [Basic Linux Command  ](#basic-linux-command--)
+    - [grep \& mv](#grep--mv)
+    - [grep \& head](#grep--head)
+  - [running processes ](#running-processes-)
+  - [Find directories' size](#find-directories-size)
+  - [logging  ](#logging--)
+    - [Basic configurations](#basic-configurations)
+  - [change interpreter in vscode  ](#change-interpreter-in-vscode--)
 
-
-## Summary 
-1. [Basic linux cmd](#cmd)
-2. [Running processes](#background)
-3. [Logging](#log)
-4. [Change interpreter in VScode](#interpreter)
 
  
 ## Basic Linux Command <a name='cmd'> </a>
@@ -15,7 +18,7 @@ move all the files contained in the current dir finishing by *1.png* into the *t
 ```bash
 mv $( ls | grep 1.png) test
 ```
-### greap & head
+### grep & head
 ```bash
 ls | grep 0.png | head -n 10
 ```
@@ -31,6 +34,13 @@ Executes 1.py in background & wirte the stout to the file 1.ouput.
 ```bash
 nohup sh scheduler/preprocessing.sh > logs/output_prepro_ch_visuel.output &
 ```
+
+## Find directories' size
+- Top 40 directories by size
+```bash
+sudo du -hsx /* | sort -rh | head -n 40
+```
+
 
 ## logging <a name='log'> </a>
 The `logging` module in Python provides a default logger that allows to get started without much configuration. 

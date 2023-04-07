@@ -3,28 +3,40 @@
  
 
 - [git fetch \& pull ](#git-fetch--pull-)
-  - [git fetch](#git-fetch)
-  - [git pull](#git-pull)
-- [git merge](#git-merge)
-- [.gitignore  ](#gitignore--)
-- [remove git dir](#remove-git-dir)
-- [store credentials](#store-credentials)
-- [remove last commit](#remove-last-commit)
+    - [git fetch](#git-fetch)
+    - [git pull](#git-pull)
+- [Branches](#branches)
+- [Useful commands \& infos](#useful-commands--infos)
+  - [.gitignore  ](#gitignore--)
+  - [remove git dir](#remove-git-dir)
+  - [store credentials](#store-credentials)
+  - [remove last commit](#remove-last-commit)
 
 
 
-## git fetch & pull <a name="fetch"></a>
+> GitHub is a code hosting platform for version control and collaboration.  
+
+
+# git fetch & pull <a name="fetch"></a>
 ### git fetch
 `git fetch` is the command that tells your local git to retrieve the latest meta-data info from the original (yet doesn’t do any file transferring. It’s more like just checking to see if there are any changes available).
 
 ### git pull 
 `git pull` on the other hand does that AND brings (copy) those changes from the remote repository.
 
-## git merge
+# Branches
+> Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository.
+
+
 Let say we have created a __feature branch__ from the __main branch__ and we want to merge them i.e commit the change from the __feature branch__ into the __main branch__.
 
+- see local branches : `git branch`
+- see ALL local and remote branches : `git branch -a`
+- 
 
-## .gitignore  <a name="ignore"></a>
+
+# Useful commands & infos
+##  .gitignore  <a name="ignore"></a>
 Create a file `.gitignore`, add directories wished to be ignored from your git remote repository. 
 
 ## remove git dir 
