@@ -7,8 +7,9 @@
     - [Standard operations](#standard-operations)
 - [Interacting with data](#interacting-with-data)
   - [`dataset`, PyTorch class](#dataset-pytorch-class)
-  - [`dataloader`, PyTorch](#dataloader-pytorch)
-  - [`dataModule`,  Lightning](#datamodule--lightning)
+  - [`DataLoader`, PyTorch](#dataloader-pytorch)
+    - [Understanding the `DataLoader` class](#understanding-the-dataloader-class)
+  - [`DataModule`,  Lightning](#datamodule--lightning)
 - [The network](#the-network)
   - [designing the network](#designing-the-network)
   - [`nn.sequential`](#nnsequential)
@@ -65,12 +66,56 @@ The `__len__` function returns the number of samples in our dataset.
 - `__getitem__`
 The `__getitem__` function loads and returns a sample from the dataset at the given index `idx`.
 
-## `dataloader`, PyTorch 
-create the train, test and val sets along with defining batch_size, multiprocess, ...
+## `DataLoader`, PyTorch 
+The `DataLoader` class is used to create iterators over datasets. It makes the process of iterating over the dataset easier and more efficient.
+It allows to : 
+- define a dataset 
+- batch the data
+- shuffle the data
+- support multiprocessing workers
+- merge datasets together
+- laod data directly to *CUDA*
 
+### Understanding the `DataLoader` class
+```python
+from torch.utils.data import DataLoader
 
-## `dataModule`,  Lightning 
+DataLoader(
+    dataset, 
+    batch_size=1, 
+    shuffle=False, 
+    sampler=None, 
+    batch_sampler=None, 
+    num_workers=0, 
+    collate_fn=None, 
+    pin_memory=False, 
+    drop_last=False, 
+    timeout=0, 
+    *, 
+    prefetch_factor=2, 
+    persistent_workers=False
+)
+```
+- `dataset`, `PyTorch Dataset` class expected
+- `batch_size`, `int` how many samples per batch to load (default: `1`)
+- `shuffle`, `bool` set to `True` to have the data reshuffled at every epoch (default: `False`) 
+- `sampler`, `PyTorch Sampler` class expected, does not work when `shuffle=True`
+- `pin_memory`, `bool` if `True`, the data loader will copy tensors into CUDA pinned memory before returning them. (default: `False`)
+
+- `num_workers`, number of subprocesses to use when loading the dataset. 0 means that the data will be loaded in the main process.
+
+Num_workers tells the data loader instance how many sub-processes to use for data loading, if num_workers=0  the GPU has to wait for the CPU to load the data.
+
+- `persistent_workers`, if True the data loader will not shutdown the worker processes after a dataset has been consumed once. This allows to maintain the workers `Dataset` instances alive. (default: `False`)
+
+- `prefetch_factor`, number of samples loaded in advance by each worker. (default: `2`)
+- `drop_last`, set to `True` to drop the last incomplete batch, if the dataset size is not divisible by the batch size. If `False` and the size of dataset is not divisible by the batch size, then the last batch will be smaller. (default: `False`)
+
+## `DataModule`,  Lightning 
 Clean module to establish the datasets. 
+
+⚠️ for images, prefer jpg ext to png ext. There are faster to load. 
+
 
 # The network 
 
