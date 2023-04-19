@@ -27,3 +27,6 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 - [LaTeX](https://github.com/jumdc/cheat-sheets/blob/main/others/latex.md)
 - [label-studio](https://github.com/jumdc/cheat-sheets/blob/main/others/labelling-data.md)
 - [markdown and pandoc](others/markdown.md)
+
+### TDA
+- [Introdcution to TDA with Gudhi](https://github.com/jumdc/cheat-sheets/blob/main/tda/introduction.md)
