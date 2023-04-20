@@ -31,7 +31,7 @@ To represent the set of simplices of $K$, the words are stored in a tree and sat
 The construstion of a simplex tree : 
 - When inserting $[\sigma] = [l_0, ..., l_j]$, we start from the root., and follow the path containing successively all labels $l_0, ..., l_i$ where $[l_0, ..., l_i]$. We then append to the node representing $[l_0, ..., l_i]$ a path consisting of the nodes storing $l_{i + 1}, ..., l_j$
 
-
+<img src="./../ressources/simplex_tree.jpg" alt="example of simplex tree" width="60%" height="60%">
 
 # **References**
 [^1] : Boissonnat, JD., Maria, C. The Simplex Tree: An Efficient Data Structure for General Simplicial Complexes. Algorithmica 70, 406–427 (2014). https://doi.org/10.1007/s00453-014-9887-3
