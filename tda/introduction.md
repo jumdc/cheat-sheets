@@ -2,7 +2,8 @@
 - [TDA](#tda)
   - [Background](#background)
   - [Simplex tree](#simplex-tree)
-- [**References**](#references)
+    - [In gudhi :](#in-gudhi-)
+- [References](#references)
 
 
 ## Background 
@@ -10,7 +11,7 @@
 
 
 ## Simplex tree
-Data strucutre to represent abstract simplicial complexes of any dimension[^1]. 
+Data strucutre to represent abstract simplicial complexes of any dimension[1]. 
 
 > **Definition**   
 > Let $K=(V,S)$ be a simplicial complex of dimesions $k$. The vertices are labelled from $1$ to $|V|$. Specially, a $j-$simplex of $K$ is uniquely represented as the word of legth $j + 1$ consisting of the ordered set of the labels of its $j + 1$ vertices.   
@@ -33,7 +34,14 @@ The construstion of a simplex tree :
 
 <img src="./../ressources/simplex_tree.jpg" alt="example of simplex tree" width="60%" height="60%">
 
-# **References**
-[^1] : Boissonnat, JD., Maria, C. The Simplex Tree: An Efficient Data Structure for General Simplicial Complexes. Algorithmica 70, 406–427 (2014). https://doi.org/10.1007/s00453-014-9887-3
+
+
+### In gudhi : 
+
+
+[Tutorial on simplex trees](https://github.com/GUDHI/TDA-tutorial/blob/master/Tuto-GUDHI-simplex-Trees.ipynb)
+
+# References
+[1] : Boissonnat, JD., Maria, C. The Simplex Tree: An Efficient Data Structure for General Simplicial Complexes. Algorithmica 70, 406–427 (2014). https://doi.org/10.1007/s00453-014-9887-3
 
 
