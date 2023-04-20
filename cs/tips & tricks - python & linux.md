@@ -1,18 +1,19 @@
-﻿# Tips & tricks for using a server
+﻿# Tips & tricks : Python, Linux
 
-- [Tips \& tricks for using a server](#tips--tricks-for-using-a-server)
-  - [Basic Linux Command  ](#basic-linux-command--)
+- [Tips \& tricks : Python, Linux](#tips--tricks--python-linux)
+- [Linux](#linux)
     - [grep \& mv](#grep--mv)
     - [grep \& head](#grep--head)
-  - [running processes ](#running-processes-)
+  - [running processes](#running-processes)
   - [Find directories' size](#find-directories-size)
-  - [logging  ](#logging--)
+- [Python](#python)
+  - [logging](#logging)
     - [Basic configurations](#basic-configurations)
-  - [change interpreter in vscode  ](#change-interpreter-in-vscode--)
+  - [change interpreter in vscode](#change-interpreter-in-vscode)
 
 
  
-## Basic Linux Command <a name='cmd'> </a>
+# Linux
 ### grep & mv 
 move all the files contained in the current dir finishing by *1.png* into the *test* dir. 
 ```bash
@@ -23,7 +24,7 @@ mv $( ls | grep 1.png) test
 ls | grep 0.png | head -n 10
 ```
 
-## running processes<a name='background'> </a>
+## running processes 
 
 running python code in background & keeping the output : 
 ```bash
@@ -41,8 +42,9 @@ nohup sh scheduler/preprocessing.sh > logs/output_prepro_ch_visuel.output &
 sudo du -hsx /* | sort -rh | head -n 40
 ```
 
+# Python
 
-## logging <a name='log'> </a>
+## logging
 The `logging` module in Python provides a default logger that allows to get started without much configuration. 
 
 :exclamation: by default `debug()`and `default()`do not get logged. 
@@ -68,5 +70,8 @@ output :
 2018-07-11 20:12:06,288 - Admin logged in
 ```
 
-## change interpreter in vscode <a name='interpreter'> </a>
+
+
+
+## change interpreter in vscode 
 `ctrl + shift + P` and select __python interpreter__.	
