@@ -1,6 +1,8 @@
 # How do write clean python code ? 
 
 - [How do write clean python code ?](#how-do-write-clean-python-code-)
+  - [Pep8](#pep8)
+    - [Import order](#import-order)
   - [Formatting and linting](#formatting-and-linting)
     - [Formatter](#formatter)
       - [**Black**](#black)
@@ -8,6 +10,15 @@
       - [Why using linting ?](#why-using-linting-)
       - [**Pylint**](#pylint)
 
+
+## Pep8
+
+### Import order 
+Imports should be grouped in the following order:
+
+- Standard library imports.
+- Related third party imports.
+- Local application/library specific imports.
 
 ## Formatting and linting
 
