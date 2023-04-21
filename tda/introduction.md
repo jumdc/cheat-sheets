@@ -1,6 +1,8 @@
 # TDA
 - [TDA](#tda)
   - [Background](#background)
+    - [Simplicial complex](#simplicial-complex)
+    - [Filtration](#filtration)
   - [Simplex tree](#simplex-tree)
     - [In gudhi :](#in-gudhi-)
 - [References](#references)
@@ -8,6 +10,18 @@
 
 ## Background 
 
+### Simplicial complex
+> **Definition**
+> A *simplicial complex* $K$ is a pair $(V,S)$ where $V$ is a finite set whose element are called the vertices of $K$ and $S$ is a set of non-empty subsets of $V$ that is required to satisfy the following properties :
+> - $p \in V \implies \{p\} \in S$
+> - $\sigma \in S \implies \forall \tau \subset \sigma, \tau \in S$
+
+Each element $\sigma \in K$ is called a simplex or a face of $K$.
+
+
+### Filtration 
+> **Definition**   
+> A *filtration* over a simplicial complex $K$ is an ordering of the simplices of $K$ such that all prefixes in the ordering are subcomplexes of $K$. Particularly, for two simplices $\tau$ and $\sigma$ in the simplicial complex such that $\tau \in \sigma$, $\tau$ appears before $\sigma$ in the ordering. The order of the simplices is simply the order of the real numbers. 
 
 
 ## Simplex tree
