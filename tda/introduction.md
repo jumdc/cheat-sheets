@@ -6,7 +6,6 @@
     - [Filtration](#filtration)
   - [Simplex tree](#simplex-tree)
     - [In gudhi :](#in-gudhi-)
-  - [Sub-level sets filtration](#sub-level-sets-filtration)
 - [References](#references)
 
 
@@ -64,8 +63,6 @@ The construstion of a simplex tree :
 
 [Tutorial on simplex trees](https://github.com/GUDHI/TDA-tutorial/blob/master/Tuto-GUDHI-simplex-Trees.ipynb)
 
-
-## Sub-level sets filtration 
 
 # References
 [1] : Boissonnat, JD., Maria, C. The Simplex Tree: An Efficient Data Structure for General Simplicial Complexes. Algorithmica 70, 406–427 (2014). https://doi.org/10.1007/s00453-014-9887-3
