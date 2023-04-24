@@ -30,4 +30,6 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 - [markdown and pandoc](others/markdown.md)
 
 ### TDA
-- [Introdcution to TDA with Gudhi](https://github.com/jumdc/cheat-sheets/blob/main/tda/introduction.md)
+- [Introdcution to TDA](https://github.com/jumdc/cheat-sheets/blob/main/tda/introduction.md)
+- [Persistent Homology](https://github.com/jumdc/cheat-sheets/blob/main/tda/persistent-homology.md)
+- [Vectorization methods of Persistent Diagram](https://github.com/jumdc/cheat-sheets/blob/main/tda/vectorization.md)
