@@ -21,6 +21,11 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 - [Pytorch](https://github.com/jumdc/cheat-sheets/blob/main/ai/pytorch.md)
 - [logger](https://github.com/jumdc/cheat-sheets/blob/main/ai/logger.md)
 
+### TDA
+- [Introdcution to TDA](https://github.com/jumdc/cheat-sheets/blob/main/tda/introduction.md)
+- [Persistent Homology](https://github.com/jumdc/cheat-sheets/blob/main/tda/persistent-homology.md)
+- [Vectorization methods of Persistent Diagram](https://github.com/jumdc/cheat-sheets/blob/main/tda/vectorization.md)
+
 ### Hardware
 - [GPUs, Nvidia & cuda](https://github.com/jumdc/cheat-sheets/blob/main/hardware/gpu.md)
 
@@ -29,7 +34,3 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 - [label-studio](https://github.com/jumdc/cheat-sheets/blob/main/others/labelling-data.md)
 - [markdown and pandoc](others/markdown.md)
 
-### TDA
-- [Introdcution to TDA](https://github.com/jumdc/cheat-sheets/blob/main/tda/introduction.md)
-- [Persistent Homology](https://github.com/jumdc/cheat-sheets/blob/main/tda/persistent-homology.md)
-- [Vectorization methods of Persistent Diagram](https://github.com/jumdc/cheat-sheets/blob/main/tda/vectorization.md)
