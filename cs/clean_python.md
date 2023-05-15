@@ -9,6 +9,8 @@
     - [Linting](#linting)
       - [Why using linting ?](#why-using-linting-)
       - [**Pylint**](#pylint)
+  - [`*args` \& `**kwargs`](#args--kwargs)
+
 
 
 ## Pep8
@@ -51,3 +53,13 @@ It checks for errors, enforces a conding standard and can make suggestion about 
 
 - Use  
 `pylint {file_name}`
+
+## `*args` & `**kwargs`
+Both are arguments which allows a function to accept an arbitrary number of arguments.
+
+- `args` : arguments (non keywords arguments)
+pass iterable objects like list, tuple, set, etc. as arguments in the function call.
+- `kwargs` : keyword arguments
+pass dictionary type objects as arguments in the function call.
+
+> When to use ? We use *args and **kwargs as an argument when we are unsure about the number of arguments to pass in the functions.
