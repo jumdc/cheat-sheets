@@ -60,3 +60,4 @@
 - [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
 - [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/)
 - [The Annotated Transformer](https://nlp.seas.harvard.edu/2018/04/03/attention.html)
+- [Attention is all you need; Attentional Neural Network Models | Łukasz Kaiser | Masterclass](https://www.youtube.com/watch?v=rBCqOTEfxvg)
