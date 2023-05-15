@@ -8,7 +8,7 @@
 
 # Deep-Dive in a Transformer **Encoder** Block 
 
-<img src="./../ressources/transformer_encoder-clean.png" alt="Transformer Encoder Block" width="50%" height="50%">
+<img src="./../ressources/transformer_encoder-clean.png" alt="Transformer Encoder Block" width="30%" height="30%">
 
 - $N$x : number of encoder blocks
 - Add & Norm :
@@ -24,14 +24,14 @@
     An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is computed as a weighted sum of the values, where the weight assigned to each value is computed by a compatibility function of the query with the corresponding key.  
     We call our particular attention **“Scaled Dot-Product Attention”**. The input consists of queries and keys of dimension $d_k$, and values of dimension $d_v$. We compute the dot products of the query with all keys, divide each by $\sqrt{d_k}$, and apply a softmax function to obtain the weights on the values.
 
-    <img src="./../ressources/scaled-dot-product.png" alt="Transformer Encoder Block" width="50%" height="50%">
+    <img src="./../ressources/scaled-dot-product.png" alt="Transformer Encoder Block" width="40%" height="40%">
 
     In practice, we compute the attention function on a set of queries simultaneously, packed together into a matrix $Q$. The keys and values are also packed together into matrices $K$ and $V$. We compute the matrix of outputs as
     We compute the matrix of outputs as  $Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}})V$
 - Multi-head Attention
   Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions. With a single attention head, averaging inhibits this.
 
-  <img src="./../ressources/mha.png" alt="Transformer Encoder Block" width="50%" height="50%">
+  <img src="./../ressources/mha.png" alt="Transformer Encoder Block" width="40%" height="40%">
 
     $MultiHeadAttention(Q, K, V) = Concat(head_1, ..., head_h) * W^O$  
     where $head_i = Attention(QW_i^Q, KW_i^K, VW_i^V)$
