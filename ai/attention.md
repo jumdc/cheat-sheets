@@ -8,7 +8,7 @@
 
 # Deep-Dive in a Transformer **Encoder** Block 
 
-<img src="./../ressources/transformer_encoder.png" alt="Transformer Encoder Block" width="50%" height="50%">
+<img src="./../ressources/transformer_encoder-clean.png" alt="Transformer Encoder Block" width="50%" height="50%">
 
 - $N$x : number of encoder blocks
 - Add & Norm :
