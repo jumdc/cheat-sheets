@@ -1,14 +1,35 @@
 # Attention, Self-Attention, Cross-Attention, Transformer
 
 - [Attention, Self-Attention, Cross-Attention, Transformer](#attention-self-attention-cross-attention-transformer)
-- [Deep-Dive in a Transformer **Encoder** Block](#deep-dive-in-a-transformer-encoder-block)
+- [Intuition behind attention](#intuition-behind-attention)
+- [Deep-Dive in the Transformer](#deep-dive-in-the-transformer)
+  - [the **Encoder** Block](#the-encoder-block)
   - [Sum-up of parameters](#sum-up-of-parameters)
 - [Useful links](#useful-links)
 
 
-# Deep-Dive in a Transformer **Encoder** Block 
+<div style="text-align:center">
+  <img src="./../ressources/transformer.png" alt="Transformer" width="30%" height="30%">
+</div>
 
-<img src="./../ressources/transformer_encoder-clean.png" alt="Transformer Encoder Block" width="30%" height="30%">
+# Intuition behind attention
+
+The goal of attention : learning from sequences.   
+Attention is context-based query : it makes a query with a vector and looks at similar things in your past.
+> Dot-attention attention   
+> $Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}})V$
+
+i.e, from a query, we want to find the most similar key and then get the values that corresponds to the similar keys.
+
+In details : 
+-  The mask, $softmax(\frac{QK^T}{\sqrt{d_k}})$, gives a probability distribution over key, which is peak at the ones which are similar to the query. 
+-  $softmax(\frac{QK^T}{\sqrt{d_k}})*V$, multiply value by this mask.
+
+# Deep-Dive in the Transformer
+## the **Encoder** Block 
+<div style="text-align:center">
+  <img src="./../ressources/transformer_encoder-clean.png" alt="Transformer Encoder Block" width="20%" height="20%">
+</div>
 
 - $N$x : number of encoder blocks
 - Add & Norm :
@@ -23,15 +44,17 @@
 - Attention  
     An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is computed as a weighted sum of the values, where the weight assigned to each value is computed by a compatibility function of the query with the corresponding key.  
     We call our particular attention **“Scaled Dot-Product Attention”**. The input consists of queries and keys of dimension $d_k$, and values of dimension $d_v$. We compute the dot products of the query with all keys, divide each by $\sqrt{d_k}$, and apply a softmax function to obtain the weights on the values.
-
-    <img src="./../ressources/scaled-dot-product.png" alt="Transformer Encoder Block" width="40%" height="40%">
+    <div style="text-align:center">
+      <img src="./../ressources/scaled-dot-product.png" alt="Transformer Encoder Block" width="30%" height="40%">
+    </div>
 
     In practice, we compute the attention function on a set of queries simultaneously, packed together into a matrix $Q$. The keys and values are also packed together into matrices $K$ and $V$. We compute the matrix of outputs as
     We compute the matrix of outputs as  $Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}})V$
 - Multi-head Attention
   Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions. With a single attention head, averaging inhibits this.
-
-  <img src="./../ressources/mha.png" alt="Transformer Encoder Block" width="40%" height="40%">
+    <div style="text-align:center">
+      <img src="./../ressources/mha.png" alt="Transformer Encoder Block" width="40%" height="40%">
+    </div>
 
     $MultiHeadAttention(Q, K, V) = Concat(head_1, ..., head_h) * W^O$  
     where $head_i = Attention(QW_i^Q, KW_i^K, VW_i^V)$
