@@ -1,6 +1,6 @@
-﻿# Pytorch & lightning cheatsheet 
+﻿# Deep Learning with Pytorch & lightning : the basics 
 
-- [Pytorch \& lightning cheatsheet](#pytorch--lightning-cheatsheet)
+- [Deep Learning with Pytorch \& lightning : the basics](#deep-learning-with-pytorch--lightning--the-basics)
 - [Introduction](#introduction)
   - [PyTorch vs TensorFlow](#pytorch-vs-tensorflow)
   - [Tensors](#tensors)
