@@ -17,7 +17,6 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 
 ### AI 
 - [Basic ML](https://github.com/jumdc/cheat-sheets/blob/main/ai/basic-ml.md)
-- [DL training steps](https://github.com/jumdc/cheat-sheets/blob/main/ai/dl-learning%20steps.md)
 - [Pytorch](https://github.com/jumdc/cheat-sheets/blob/main/ai/pytorch.md)
 - [Attention](https://github.com/jumdc/cheat-sheets/blob/main/ai/attention.md)
 - [logger](https://github.com/jumdc/cheat-sheets/blob/main/ai/logger.md)

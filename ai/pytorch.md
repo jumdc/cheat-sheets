@@ -26,6 +26,8 @@
   - [normalization](#normalization)
     - [why normalization ?](#why-normalization-)
     - [normalization with pretrained net](#normalization-with-pretrained-net)
+- [Regularization techniques](#regularization-techniques)
+    - [Dropout](#dropout)
 
 
 
@@ -254,3 +256,9 @@ transform=Compose([
   Normalize((0.45, 0.45, 0.45), (0.225, 0.225, 0.225))
 ])
 ```
+
+# Regularization techniques    
+
+### Dropout
+**What is Dropout?**
+> Dropout is a technique where randomly selected neurons are ignored during training. They are “dropped-out” randomly. This means that their contribution to the activation of downstream neurons is temporally removed on the forward pass and any weight updates are not applied to the neuron on the backward pass.
