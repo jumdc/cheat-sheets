@@ -24,16 +24,33 @@
 ### git pull 
 `git pull` on the other hand does that AND brings (copy) those changes from the remote repository.
 
-# Branches
+# Git merge & branches 
 > Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository.
 
+Say that we have a new branch `feature`that is based on `main`. We did a few commits, and we now want to merge this feature into `main`.
+<img width="439" alt="image" src="https://github.com/jumdc/cheat-sheets/assets/62952163/195be558-d01e-4fcd-af33-6157662fc581">
 
-Let say we have created a __feature branch__ from the __main branch__ and we want to merge them i.e commit the change from the __feature branch__ into the __main branch__.
+Invoking this command will merge the specified branch `feature` into the current branch. 
 
-- see local branches : `git branch`
-- see ALL local and remote branches : `git branch -a`
-- 
+<img width="439" alt="image" src="https://github.com/jumdc/cheat-sheets/assets/62952163/23e23765-7b4d-4d14-bd23-73658d61cbfa">
 
+A fast-forward merge can occur when there is a linear path fro mthe current branch tip to the target branch. Instead of actually 'merging', all Git has to do to integrate the history is move (i. fast-forward) the current branch tip up to the target branch tip. 
+<img width="439" alt="image" src="https://github.com/jumdc/cheat-sheets/assets/62952163/129a883b-b78d-4dcc-a940-cd7f5f8dc759">
+
+```bash
+# Start a new feature
+git checkout -b new-feature main
+# Edit some files
+git add <file>
+git commit -m "Start a feature"
+# Edit some files
+git add <file>
+git commit -m "Finish a feature"
+# Merge in the new-feature branch
+git checkout main
+git merge new-feature
+git branch -d new-feature
+```
 
 # Useful commands & infos
 ##  .gitignore  <a name="ignore"></a>
@@ -48,3 +65,6 @@ Create a file `.gitignore`, add directories wished to be ignored from your git r
 ## remove last commit
 - preserve the changes : ` git reset --soft HEAD~1`  
 - if you don't want to keep the changes : `git reset --hard HEAD~1`
+
+# A few useful links 
+- [Git merge](https://www.atlassian.com/git/tutorials/using-branches/git-merge#:~:text=Merging%20is%20Git's%20way%20of,merge%20into%20the%20current%20branch.)
