@@ -20,6 +20,7 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 - [Deep Learning with PyTorch : the basics](https://github.com/jumdc/cheat-sheets/blob/main/ai/pytorch.md)
 - [Attention](https://github.com/jumdc/cheat-sheets/blob/main/ai/attention.md)
 - [logger](https://github.com/jumdc/cheat-sheets/blob/main/ai/logger.md)
+- [contrastive learning](https://github.com/jumdc/cheat-sheets/blob/main/ai/constrastive.md)
 
 ### TDA
 - [Introdcution to TDA](https://github.com/jumdc/cheat-sheets/blob/main/tda/introduction.md)

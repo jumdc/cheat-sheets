@@ -5,12 +5,14 @@
 - [git fetch \& pull ](#git-fetch--pull-)
     - [git fetch](#git-fetch)
     - [git pull](#git-pull)
-- [Branches](#branches)
+- [Git merge \& branches](#git-merge--branches)
+    - [Fast-forward merge](#fast-forward-merge)
 - [Useful commands \& infos](#useful-commands--infos)
   - [.gitignore  ](#gitignore--)
   - [remove git dir](#remove-git-dir)
   - [store credentials](#store-credentials)
   - [remove last commit](#remove-last-commit)
+- [A few useful links](#a-few-useful-links)
 
 
 
