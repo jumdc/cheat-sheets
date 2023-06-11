@@ -34,6 +34,8 @@ Invoking this command will merge the specified branch `feature` into the current
 
 <img width="439" alt="image" src="https://github.com/jumdc/cheat-sheets/assets/62952163/23e23765-7b4d-4d14-bd23-73658d61cbfa">
 
+
+### Fast-forward merge
 A fast-forward merge can occur when there is a linear path fro mthe current branch tip to the target branch. Instead of actually 'merging', all Git has to do to integrate the history is move (i. fast-forward) the current branch tip up to the target branch tip. 
 <img width="439" alt="image" src="https://github.com/jumdc/cheat-sheets/assets/62952163/129a883b-b78d-4dcc-a940-cd7f5f8dc759">
 
