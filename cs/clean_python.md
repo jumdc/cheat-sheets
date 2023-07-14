@@ -1,33 +1,33 @@
-# How do write clean python code ? 
+# Cleaner is better :snake:
 
-- [How do write clean python code ?](#how-do-write-clean-python-code-)
+- [Cleaner is better :snake:](#cleaner-is-better-snake)
   - [Pep8](#pep8)
-    - [Import order](#import-order)
-  - [Formatting and linting](#formatting-and-linting)
+    - [*Import order*, Imports should be grouped in the following order:](#import-order-imports-should-be-grouped-in-the-following-order)
     - [Formatter](#formatter)
       - [**Black**](#black)
     - [Linting](#linting)
       - [Why using linting ?](#why-using-linting-)
       - [**Pylint**](#pylint)
   - [`*args` \& `**kwargs`](#args--kwargs)
+  - [logging](#logging)
+    - [Basic configurations](#basic-configurations)
+  - [Multiprocessing and multihreading](#multiprocessing-and-multihreading)
+    - [Multiprocesing](#multiprocesing)
 
 
 
 ## Pep8
+[Pep8](https://peps.python.org/pep-0008/) is the style guide for Python code. It provides guidelines to write readable code.
 
-### Import order 
-Imports should be grouped in the following order:
-
-- Standard library imports.
-- Related third party imports.
-- Local application/library specific imports.
-
-## Formatting and linting
-
+Here are a few tips to help write clean code.
+### *Import order*, Imports should be grouped in the following order:
+  - Standard library imports.
+  - Related third party imports.
+  - Local application/library specific imports.
+  - 
 ### Formatter
 
 > Code formatters make sure the codebase stays in a consistent style without any manual work. 
-
 #### **Black**
 Black can be considered as the de-facto formatter for Python projects. 
 
@@ -43,7 +43,6 @@ Black can be considered as the de-facto formatter for Python projects.
 #### Why using linting ?
 Regularly checking code with linting ensures consistensy accross the codebase. It minimizes the probability of small errors. 
 It checks for errors, enforces a conding standard and can make suggestion about how the code should be refactored.
-
 
 #### **Pylint**
 > Pylint analyses your code without running it. 
@@ -63,3 +62,70 @@ pass iterable objects like list, tuple, set, etc. as arguments in the function c
 pass dictionary type objects as arguments in the function call.
 
 > When to use ? We use *args and **kwargs as an argument when we are unsure about the number of arguments to pass in the functions.
+
+
+## logging
+The `logging` module in Python provides a default logger that allows to get started without much configuration. 
+
+:exclamation: by default `debug()`and `default()`do not get logged. 
+
+### Basic configurations 
+
+Use the method : `basicConfig(**`_`kwargs`_`)`
+Basic __parameters__ : 
+-   `level`: The root logger will be set to the specified severity level.
+-   `filename`: This specifies the file.
+-   `filemode`: If  `filename`  is given, the file is opened in this mode. The default is  `a`, which means append.
+-   `format`: This is the format of the log message.
+
+__Example__ : 
+```python
+import logging
+
+logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
+logging.info('Admin logged in')
+```
+output : 
+```bash
+2018-07-11 20:12:06,288 - Admin logged in
+```
+
+## Multiprocessing and multihreading
+Multiprocessing and multithreading are two ways of achieving distributed computing.
+
+**Multithreading**
+> Multithreading is a CPU feature that allows two or more instructions thread to execute independantly while sharing the same process ressources. 
+
+**Multiprocessing**
+> Refers to the ability of a system to run multiple processors concurrently. 
+
+### Multiprocesing
+Multiprocessing can be implemented via the `multiprocessing` Python built-in library. 
+
+- The `pool` method
+It allows the user to define the number of workers and distribute all processes to available processors in a First-In-First-Out schefule. 
+
+`pool` method is used to break a function into multiple small parts using `map` or `startmap` running the same function with different argument. 
+ NB : whereas `process` method is used to run different functions. 
+
+Example : 
+```python
+import multiprocessing as mp
+ 
+def my_func(x):
+  print(x**x)
+ 
+def main():
+  pool = mp.Pool(mp.cpu_count())
+  result = pool.map(my_func, [5,9,8])
+ 
+if __name__ == "__main__":
+  main()
+```
+
+Output 
+```python
+3125
+387420489
+16777216
+```
