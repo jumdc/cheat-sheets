@@ -4,16 +4,15 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 
 ## Table of contents
 ### CS 
+- [Writing clean Python, a few tips](https://github.com/jumdc/cheat-sheets/blob/main/cs/clean_python.md)
 - [Conda](https://github.com/jumdc/cheat-sheets/blob/main/cs/conda.md)
 - [GitHub](https://github.com/jumdc/cheat-sheets/blob/main/cs/github.md)
 - [Ffmpeg](https://github.com/jumdc/cheat-sheets/blob/main/cs/ffmpeg.md)
-- [Random tips & tricks in sh & python](https://github.com/jumdc/cheat-sheets/blob/main/cs/tips%20%26%20tricks%20-%20python%20%26%20linux.md)
+- [Survival Linux](https://github.com/jumdc/cheat-sheets/blob/main/cs/linux.md)
 - [Tmux](https://github.com/jumdc/cheat-sheets/blob/main/cs/tmux.md)
-- [Hydra](https://github.com/jumdc/cheat-sheets/blob/main/cs/hydra.md)
-- [Shapes in numpy](https://github.com/jumdc/cheat-sheets/blob/main/cs/numpy.md)
-- [Multithreading and multiprocessing in Python](https://github.com/jumdc/cheat-sheets/blob/main/cs/multi.md)
+- [Hydra, configuring complex applications](https://github.com/jumdc/cheat-sheets/blob/main/cs/hydra.md)
 - [C++](https://github.com/jumdc/cheat-sheets/blob/main/cs/cpp.md)
-- [Clean Python code](https://github.com/jumdc/cheat-sheets/blob/main/cs/clean_python.md)
+
 
 ### AI 
 - [Basic ML](https://github.com/jumdc/cheat-sheets/blob/main/ai/basic-ml.md)
