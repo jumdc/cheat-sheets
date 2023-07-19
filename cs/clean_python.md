@@ -13,6 +13,7 @@
     - [Basic configurations](#basic-configurations)
   - [Multiprocessing and multihreading](#multiprocessing-and-multihreading)
     - [Multiprocesing](#multiprocesing)
+  - [Memory management in Python](#memory-management-in-python)
 
 
 
@@ -129,3 +130,12 @@ Output
 387420489
 16777216
 ```
+
+## Memory management in Python
+[Source](https://stackabuse.com/basics-of-memory-management-in-python/)
+
+Memory management is the process of efficiently allocating, de-allocating, and coordinating memory so that all the different processes run smoothly and can optimally access different system resources.   
+
+In Python, the memory manager is responsible for these kinds of tasks by periodically running to clean up, allocate, and manage the memory. Unlike C, Java, and other programming languages, Python manages objects by using reference counting. This means that the memory manager keeps track of the number of references to each object in the program. When an **object's reference count drops to zero**, which means the object is no longer being used, the garbage collector (part of the memory manager) automatically frees the memory from that particular object.
+
+> The garbage collector is a cyclic garbage collector, which means that it periodically checks for objects in the program that are no longer being used by the program. It then automatically frees up the memory used by those objects.
