@@ -22,6 +22,9 @@ The two main reasons of its sucess :
 - direct mapping of hardware features
 - zero-overhead abstractions (high-level abstractions)
 
+### C++ on mac
+gcc and  g++ : use Clang natively. 
+To use gcc natively : `brew install gcc` will download the latest version. To call it `gcc-13` and `g++13` 
 
 ## Hello World
 
