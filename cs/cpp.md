@@ -155,3 +155,8 @@ double MyFunction (double **matrix, int rows, int columns) {
 
 
 #### arguments' function by values or reference ?
+
+
+# Random information
+### extension
+- .hpp : Header file written in the C++ programming language; may contain data types, constants, and variables; can be inserted into a .CPP source code file using the #include directive; used for storing reusable components of code.
