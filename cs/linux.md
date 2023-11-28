@@ -71,6 +71,3 @@ Type `vi ~/.ssh/config` in the terminal and add the connection's set-up as follo
  $ HostName **hostname**
  $ PasswordAuthentication yes
 ```
-
-Then save the file, and source it : `source ~/.bashrc`
-
