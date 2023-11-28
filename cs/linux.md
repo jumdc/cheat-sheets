@@ -8,6 +8,7 @@
     - [grep \& head](#grep--head)
   - [Running processes](#running-processes)
   - [Find directories' size](#find-directories-size)
+  - [Use ssh](#use-ssh-efficiently)
 
 
 ## Navigate files and directories :boat:
@@ -57,3 +58,19 @@ sudo du -hsx /* | sort -rh | head -n 40
 
 <!-- ## change interpreter in vscode 
 `ctrl + shift + P` and select __python interpreter__.	 -->
+
+
+## use ssh efficiently 
+### Adding ssh shortcut 
+Type `vi ~/.ssh/config` in the terminal and add the connection's set-up as follows :
+
+```{bash}
+ $ Host **nameforhost**
+ $ User **yourusername** 
+ $ ForwardAgent yes
+ $ HostName **hostname**
+ $ PasswordAuthentication yes
+```
+
+Then save the file, and source it : `source ~/.bashrc`
+
