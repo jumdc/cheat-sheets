@@ -1,4 +1,4 @@
-# Java
+# ☕️ Java
 - [Java](#java)
   - [Basics](#basics)
     - [VSCode \& Java](#vscode--java)
