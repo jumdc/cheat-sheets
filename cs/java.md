@@ -1,12 +1,11 @@
 # ☕️ Java
 - [Java](#java)
-  - [Basics](#basics)
+  - [Set-Up](#basics)
     - [VSCode \& Java](#vscode--java)
     - [Call additional classes from .jar files](#call-additional-classes-from-jar-files)
+  - [Basics](#basics)
 
-
-
-## Basics
+## Set-Up
 ### VSCode & Java
 - To create a new project: `Ctrl+Shift+P` -> `Java: Create Java New Project`
 - Select `No build tools` and `No build tools` to create a simple Java project
@@ -37,3 +36,73 @@ public class TestTC {
     }
 }
 ```
+
+## Basics
+- First programs
+```java
+public class Bonjour{ // class public -> can be seen from outside the class
+  public static void main(String[] args){
+  System.out.println ("Salut !"); // print function in Java
+  return; // to give the hand back 
+}
+}
+```
+`String[] args`: [command line arguments](https://docs.oracle.com/javase/tutorial/essential/environment/cmdLineArgs.html) 
+
+- Variables
+Variables need to be **declared** and **typed**
+Both declaration and initialisation can be combined `int j = 3`
+
+- Printing
+  ` System.out.print("hello");` does not skip line afterwards
+  ` System.out.println("hello");` skips line afterwards
+
+It is possible to overload: 
+```java
+public class Calculs2{
+  public static void main(String[] args){
+    int n = 10, b;
+    b = n*(n-1)/2;
+    System.out.println("résultat="+b);
+    return;
+  }
+}
+```
+
+- If statements
+```Java
+if(boolean condition ){
+  // do actio heere
+}
+else{ // complete }
+```
+Else is optional.
+
+- Loops
+    - `While`
+  ```Java
+    while(n != devinette){
+        // complete here
+    }
+    else{
+        // else condition
+    }
+  ```
+    - `For`
+    ```Java
+     for(i = 0; i <= 9; i++){
+        // complete 
+    }
+    ```
+- Functions
+```Java
+static <type_result> <name>(<params>)
+{
+[declare var]
+[instructions]
+return <result>;
+}
+```
+
+NB: `void` when a function has type void, `return` is optional however it eases the comprehension of the code overall. 
+
