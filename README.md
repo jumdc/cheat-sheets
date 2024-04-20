@@ -12,6 +12,7 @@ Cheat Sheets about a wide variety of themes in CS &amp; AI
 - [Tmux](https://github.com/jumdc/cheat-sheets/blob/main/cs/tmux.md)
 - [Hydra, configuring complex applications](https://github.com/jumdc/cheat-sheets/blob/main/cs/hydra.md)
 - [C++](https://github.com/jumdc/cheat-sheets/blob/main/cs/cpp.md)
+- [Java](https://github.com/jumdc/cheat-sheets/blob/main/cs/java.md)
 
 
 ### AI 
