@@ -1,9 +1,8 @@
 # ☕️ Java
-- [Java](#java)
-  - [Set-Up](#basics)
-    - [VSCode \& Java](#vscode--java)
-    - [Call additional classes from .jar files](#call-additional-classes-from-jar-files)
-  - [Basics](#basics)
+- [Set-Up](#basics)
+  - [VSCode \& Java](#vscode--java)
+  - [Call additional classes from .jar files](#call-additional-classes-from-jar-files)
+- [Basics](#basics)
 
 ## Set-Up
 ### VSCode & Java
