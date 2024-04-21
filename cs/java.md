@@ -3,6 +3,13 @@
   - [VSCode \& Java](#vscode--java)
   - [Call additional classes from .jar files](#call-additional-classes-from-jar-files)
 - [Basics](#basics)
+  - [First Program](#First-program)
+  - [Variable](#variable)
+  - [Printing](#printing)
+  - [If statements](#if-statements)
+  - [Loops](#loops)
+  - [Functions](#functions)
+  - [Commenting](#commenting-in-java)
 
 ## Set-Up
 ### VSCode & Java
@@ -37,7 +44,7 @@ public class TestTC {
 ```
 
 ## Basics
-- First programs
+### First program
 ```java
 public class Bonjour{ // class public -> can be seen from outside the class
   public static void main(String[] args){
@@ -48,11 +55,15 @@ public class Bonjour{ // class public -> can be seen from outside the class
 ```
 `String[] args`: [command line arguments](https://docs.oracle.com/javase/tutorial/essential/environment/cmdLineArgs.html) 
 
-- Variables
+### Variables
 Variables need to be **declared** and **typed**
 Both declaration and initialisation can be combined `int j = 3`
 
-- Printing
+- Affectation
+convert to a type: `int x = (int)12.7`
+useful for double division from int.
+
+### Printing
   ` System.out.print("hello");` does not skip line afterwards
   ` System.out.println("hello");` skips line afterwards
 
@@ -67,8 +78,7 @@ public class Calculs2{
   }
 }
 ```
-
-- If statements
+### If statements
 ```Java
 if(boolean condition ){
   // do actio heere
@@ -77,7 +87,7 @@ else{ // complete }
 ```
 Else is optional.
 
-- Loops
+### Loops
     - `While`
   ```Java
     while(n != devinette){
@@ -93,7 +103,7 @@ Else is optional.
         // complete 
     }
     ```
-- Functions
+### Functions
 ```Java
 static <type_result> <name>(<params>)
 {
@@ -105,3 +115,50 @@ return <result>;
 
 NB: `void` when a function has type void, `return` is optional however it eases the comprehension of the code overall. 
 
+### Commenting in Java
+- Documentation Comments
+  This type of comment is used generally when writing code for a project/software package, since it helps to generate a documentation page for reference, which can be used for getting information about methods present, its parameters, etc. For example,
+Examples:
+```Java
+// Java program to illustrate frequently used 
+// Comment tags 
+
+/** 
+* <h1>Find average of three numbers!</h1> 
+* The FindAvg program implements an application that 
+* simply calculates average of three integers and Prints 
+* the output on the screen. 
+* 
+* @author Pratik Agarwal 
+* @version 1.0 
+* @since 2017-02-18 
+*/
+public class FindAvg 
+{ 
+	/** 
+	* This method is used to find average of three integers. 
+	* @param numA This is the first parameter to findAvg method 
+	* @param numB This is the second parameter to findAvg method 
+	* @param numC This is the second parameter to findAvg method 
+	* @return int This returns average of numA, numB and numC. 
+	*/
+	public int findAvg(int numA, int numB, int numC) 
+	{ 
+		return (numA + numB + numC)/3; 
+	} 
+
+	/** 
+	* This is the main method which makes use of findAvg method. 
+	* @param args Unused. 
+	* @return Nothing. 
+	*/
+
+	public static void main(String args[]) 
+	{ 
+		FindAvg obj = new FindAvg(); 
+		int avg = obj.findAvg(10, 20, 30); 
+
+		System.out.println("Average of 10, 20 and 30 is :" + avg); 
+	} 
+} 
+```
