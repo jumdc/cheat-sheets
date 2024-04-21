@@ -10,6 +10,7 @@
   - [Loops](#loops)
   - [Functions](#functions)
   - [Commenting](#commenting-in-java)
+  - [Tables](#tables)
 
 ## Set-Up
 ### VSCode & Java
@@ -44,6 +45,14 @@ public class TestTC {
 ```
 
 ## Basics
+
+Naming convetion in Java: function names start by lower camel case, class names by upper camel case. 
+
+les noms de
+fonctions commencent par une minuscule, les noms de
+classes par une majuscule
+
+
 ### First program
 ```java
 public class Bonjour{ // class public -> can be seen from outside the class
@@ -161,4 +170,22 @@ public class FindAvg
 		System.out.println("Average of 10, 20 and 30 is :" + avg); 
 	} 
 } 
+```
+### Tables
+- unidim
+```Java
+int[] t = new int[5]; // allocation obligatoire
+for(int i = 0; i < 5; i++){
+	t[i] = i*i;	
+}
+// example of init
+int[] t = new int[]{1, 0, -10, 17, 20, 17};
+```
+Size of the table: `t.length`
+- bi-dim
+```Java
+toto[][] tab;
+tab = new toto[n][m];
+// example of init
+int[][] tab=new int[][]{{1, 2}, {4, 5}, {7, 8}};
 ```
