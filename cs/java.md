@@ -1,16 +1,9 @@
 # ☕️ Java
 - [Set-Up](#basics)
   - [VSCode \& Java](#vscode--java)
-  - [Call additional classes from .jar files](#call-additional-classes-from-jar-files)
 - [Basics](#basics)
-  - [First Program](#First-program)
-  - [Variable](#variable)
-  - [Printing](#printing)
-  - [If statements](#if-statements)
-  - [Loops](#loops)
-  - [Functions](#functions)
-  - [Commenting](#commenting-in-java)
-  - [Tables](#tables)
+  - [Hello World](#hello-world) 
+- [Objects](#objects)
 
 ## Set-Up
 ### VSCode & Java
@@ -45,36 +38,20 @@ public class TestTC {
 ```
 
 ## Basics
-
 Naming convetion in Java: function names start by lower camel case, class names by upper camel case. 
-
-les noms de
-fonctions commencent par une minuscule, les noms de
-classes par une majuscule
-
-
-### First program
+### Hello World
 ```java
 public class Bonjour{ // class public -> can be seen from outside the class
   public static void main(String[] args){
-  System.out.println ("Salut !"); // print function in Java
+  System.out.println ("Hello World !"); // print function in Java
   return; // to give the hand back 
 }
 }
 ```
 `String[] args`: [command line arguments](https://docs.oracle.com/javase/tutorial/essential/environment/cmdLineArgs.html) 
 
-### Variables
-Variables need to be **declared** and **typed**
-Both declaration and initialisation can be combined `int j = 3`
-
-- Affectation
-convert to a type: `int x = (int)12.7`
-useful for double division from int.
-
-### Printing
-  ` System.out.print("hello");` does not skip line afterwards
-  ` System.out.println("hello");` skips line afterwards
+`System.out.print("hello");` does not skip line afterwards
+`System.out.println("hello");` skips line afterwards
 
 It is possible to overload: 
 ```java
@@ -87,7 +64,17 @@ public class Calculs2{
   }
 }
 ```
-### If statements
+
+### Variables
+Variables need to be **declared** and **typed**
+Both declaration and initialisation can be combined `int j = 3`
+
+- Affectation
+convert to a type: `int x = (int)12.7`
+useful for double division from int.
+
+### Loops and conditions 
+-** If statements**
 ```Java
 if(boolean condition ){
   // do actio heere
@@ -96,8 +83,7 @@ else{ // complete }
 ```
 Else is optional.
 
-### Loops
-    - `While`
+- `While`
   ```Java
     while(n != devinette){
         // complete here
@@ -105,13 +91,13 @@ Else is optional.
     else{
         // else condition
     }
-  ```
-    - `For`
-    ```Java
-     for(i = 0; i <= 9; i++){
-        // complete 
-    }
-    ```
+```
+- `For`
+```Java
+for(i = 0; i <= 9; i++){
+// complete 
+}
+```
 ### Functions
 ```Java
 static <type_result> <name>(<params>)
@@ -189,3 +175,26 @@ tab = new toto[n][m];
 // example of init
 int[][] tab=new int[][]{{1, 2}, {4, 5}, {7, 8}};
 ```
+
+# Objects
+### New class \& instantiation 
+```Java
+public class X{
+	public String nom;
+	public int promotion;
+	public X(String n, int promo){ // pas de static
+		this.nom = n;
+		this.promotion = promo;
+	// pas de return
+	}
+}
+```
+### Class variables
+- `final` : value cannot change after creation (constante)
+- `static`: value is known when compiling
+  e.g. `public static final int annee_creation = 1794;`
+
+-----
+- `public`: variables, methods are visible
+- `private`: opposite of public
+
