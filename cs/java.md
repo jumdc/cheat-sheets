@@ -4,6 +4,7 @@
 - [Basics](#basics)
   - [Hello World](#hello-world) 
 - [Objects](#objects)
+- [Complexity](#complexity)
 
 ## Set-Up
 ### VSCode & Java
@@ -198,3 +199,11 @@ public class X{
 - `public`: variables, methods are visible
 - `private`: opposite of public
 
+# Complexity 
+How much time will an algo take depending on the size of the inpput ? 
+$T(P) = K ·f(P)$ with $K$ depednant on the computer and $f(P)$ dependant on the algo itself.
+
+Examples:
+- sequantial search: $O(n)$ on avg for table of size $n$
+- sort the list first and then search -> dichotomic search $O(log_2(n))$
+- 
